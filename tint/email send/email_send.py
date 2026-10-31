@@ -1,0 +1,18 @@
+import os
+import requests
+
+MAILGUN_API_KEY = os.environ["MAILGUN_API_KEY"]
+MAILGUN_DOMAIN = "sandbox00dff56e4e3a406ca7810d53b70ed82b.mailgun.org"
+
+
+def send_simple_message():
+    return requests.post(
+        f"https://api.mailgun.net/v3/{MAILGUN_DOMAIN}/messages",
+        auth=("api", MAILGUN_API_KEY),
+        data={
+            "from": f"Mailgun Sandbox <postmaster@{MAILGUN_DOMAIN}>",
+            "to": "Golden Bay tint <contact@goldenbaytint.com>",
+            "subject": "Hello Golden Bay tint",
+            "text": "Congratulations Golden Bay tint, you just sent an email with Mailgun! You are truly awesome!",
+        },
+    )

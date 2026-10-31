@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Finding",
+  "type": "object",
+  "required": ["id", "ruleId", "severity", "message"],
+  "properties": {
+    "id": { "type": "string", "description": "unique within a run" },
+    "ruleId": { "type": "string", "description": "e.g. ASTRO-HYD-001, or CHECK for unfiled diagnostics" },
+    "severity": { "enum": ["critical", "high", "medium", "low", "info"] },
+    "message": { "type": "string" },
+    "file": { "type": "string", "description": "project-relative path" },
+    "line": { "type": ["integer", "null"] },
+    "evidence": { "type": "string" },
+    "suggestedFixRef": { "type": "string", "description": "rule/example path with remediation guidance" },
+    "classification": {
+      "enum": ["violation", "needs-validation", "exception-accepted", "info"]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+# Credentials and local environment
+.ssh/
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+.envrc
+*.tfstate
+*.tfstate.*
+*.tfvars
+resource.enc
+
+# Preserved metadata from repositories flattened into this workspace
+.nested-git-backups/
+
+# Nested repositories — each keeps its own .git and remote
+bay area web studio/
+donjosetacos/
+jev-seo/
+jita_kensei_funnel/
+kenseijudoschool/
+
+# Local backups and deploy staging copies (not source)
+kensei images backup/
+_upload_staging/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Python virtual environments
+.venv/
+venv/
+*.egg-info/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnp
+.pnp.*
+
+# Generated builds, caches, and coverage
+.next/
+.astro/
+.cache/
+.turbo/
+.vercel/
+.netlify/
+dist/
+dist-ssr/
+build/
+builds/
+out/
+coverage/
+.nyc_output/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+*.log
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

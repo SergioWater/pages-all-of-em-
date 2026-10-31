@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home — the main one-page experience -->
+  <url>
+    <loc>https://www.hbkfutsal.com/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/logo.png</image:loc>
+      <image:title>HBK Futsal — Humble Ballers Klub</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/nationals-2026.jpg</image:loc>
+      <image:title>2026 U.S. Futsal National Championship — Mandalay Bay, Las Vegas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/news/edgar-rivas-signed-panama.jpeg</image:loc>
+      <image:title>Edgar Rivas signs with HBK Futsal — Panama National Team Captain</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/news/dangelo-manzano-signed-usa.jpeg</image:loc>
+      <image:title>D'Angelo Manzano signs with HBK Futsal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/news/victor-miramontes-technical-director.jpeg</image:loc>
+      <image:title>Víctor Miramontes announced as HBK Technical Director</image:title>
+    </image:image>
+  </url>
+
+  <!-- Teams & Rosters — men's and women's NFPL squads -->
+  <url>
+    <loc>https://www.hbkfutsal.com/teams.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/mens-squad.jpg</image:loc>
+      <image:title>HBK Futsal Men's NFPL Squad 2025–2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/women-squad.jpg</image:loc>
+      <image:title>HBK Futsal Women's NFPL Squad 2025–2026</image:title>
+    </image:image>
+  </url>
+
+  <!-- Schedule — season fixtures and Nationals match times -->
+  <url>
+    <loc>https://www.hbkfutsal.com/schedule.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/news/hbk-men-match-schedule.jpeg</image:loc>
+      <image:title>HBK Men — U.S. Futsal Nationals Match Schedule</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/news/hbk-women-match-schedule.jpeg</image:loc>
+      <image:title>HBK Women — U.S. Futsal Nationals Match Schedule</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/news/hbk-u19b-match-schedule.jpeg</image:loc>
+      <image:title>HBK U19 Boys — U.S. Futsal Nationals Match Schedule</image:title>
+    </image:image>
+  </url>
+
+  <!-- Coaches & Staff -->
+  <url>
+    <loc>https://www.hbkfutsal.com/coaches.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/coaches/Victor-Miramontes.jpg</image:loc>
+      <image:title>Víctor Miramontes — Technical Director &amp; Men's Head Coach</image:title>
+    </image:image>
+  </url>
+
+  <!-- Programs — training, youth development, NFPL squads -->
+  <url>
+    <loc>https://www.hbkfutsal.com/programs.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.hbkfutsal.com/assets/skills-program.jpg</image:loc>
+      <image:title>HBK Futsal Youth Development &amp; Skills Training</image:title>
+    </image:image>
+  </url>
+
+  <!-- Sponsors — partnership opportunities -->
+  <url>
+    <loc>https://www.hbkfutsal.com/sponsors.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Book training & contact -->
+  <url>
+    <loc>https://www.hbkfutsal.com/book-online.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

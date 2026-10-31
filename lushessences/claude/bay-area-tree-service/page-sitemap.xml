@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Replace the placeholder domain before deployment. -->
+
+  <!-- Core pages -->
+  <url><loc>https://www.placeholder-tree-company.com/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/about/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/services/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/reviews/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/faqs/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/contact/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/blog/</loc></url>
+
+  <!-- Tree removal -->
+  <url><loc>https://www.placeholder-tree-company.com/tree-removal/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/tree-removal/crane-assisted-tree-removal/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/tree-removal/stump-grinding/</loc></url>
+
+  <!-- Tree pruning and trimming -->
+  <url><loc>https://www.placeholder-tree-company.com/tree-pruning-trimming/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/tree-pruning-trimming/crown-reduction/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/tree-pruning-trimming/shrub-hedge-trimming/</loc></url>
+
+  <!-- Emergency and commercial services -->
+  <url><loc>https://www.placeholder-tree-company.com/emergency-tree-service/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/commercial-tree-services/</loc></url>
+
+  <!-- Land clearing -->
+  <url><loc>https://www.placeholder-tree-company.com/land-clearing/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/land-clearing/brush-removal/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/land-clearing/fire-breaks/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/land-clearing/weed-abatement/</loc></url>
+
+  <!-- Consulting arborist -->
+  <url><loc>https://www.placeholder-tree-company.com/consulting-arborist/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/consulting-arborist/tree-risk-assessment/</loc></url>
+
+  <!-- Palm tree services -->
+  <url><loc>https://www.placeholder-tree-company.com/palm-tree-services/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/palm-tree-services/removal/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/palm-tree-services/trimming/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/palm-tree-services/maintenance/</loc></url>
+
+  <!-- City landing pages -->
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/gilroy-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/morgan-hill-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/san-jose-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/saratoga-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/palo-alto-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/redwood-city-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/san-mateo-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/san-martin-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/milpitas-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/santa-clara-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/campbell-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/los-gatos-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/cupertino-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/sunnyvale-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/mountain-view-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/los-altos-ca/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/service-areas/menlo-park-ca/</loc></url>
+
+  <!-- Legal pages -->
+  <url><loc>https://www.placeholder-tree-company.com/privacy-policy/</loc></url>
+  <url><loc>https://www.placeholder-tree-company.com/terms-and-conditions/</loc></url>
+</urlset>

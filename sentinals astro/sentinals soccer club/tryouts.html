@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Competitive Tryouts | Sentinels Soccer Club — Morgan Hill &amp; Gilroy</title>
+    <meta name="description" content="Join the Sentinels competitive soccer program. Tryout schedule, locations, birth years, and registration for boys and girls in Morgan Hill, Gilroy, and Hollister, CA." />
+    <link rel="canonical" href="https://sentinelssoccerclub.com/tryouts.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Competitive Tryouts | Sentinels Soccer Club — Morgan Hill &amp; Gilroy" />
+    <meta property="og:description" content="Join the Sentinels competitive soccer program. Tryout schedule, locations, birth years, and registration for boys and girls in Morgan Hill, Gilroy, and Hollister, CA." />
+    <meta property="og:url" content="https://sentinelssoccerclub.com/tryouts.html" />
+    <meta property="og:image" content="https://sentinelssoccerclub.com/images/favicon_transparent.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:16px 0 6px;font-size:.85rem;line-height:1.5}
+      .footer-nav a{color:inherit;opacity:.82;text-decoration:none}
+      .footer-nav a:hover{opacity:1;text-decoration:underline}
+    </style>
+</head>
+
+<body>
+
+<!-- ========================================
+     TOP BAR
+     ======================================== -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="mailto:sentinelssoccerclub@gmail.com"><i class="fas fa-envelope"></i>
+                    sentinelssoccerclub@gmail.com</a>
+                <a href="tel:4087221028"><i class="fas fa-phone"></i> (408) 722-1028</a>
+            </div>
+            <div class="topbar-center">
+                <a href="index.html"><img src="./images/favicon_transparent.png" alt="Sentinels Soccer Club Logo" /></a>
+            </div>
+            <div class="topbar-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sentinelssoccerclub/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sentinels.soccer.club" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@SentinelsSoccerClub/featured" target="_blank"
+                        rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <a href="https://sportscampament.web.app/#" class="btn-login">Login / Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-inner">
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="
+                        document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i> MENU
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Homepage</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="has-dropdown">
+                    <a href="#" class="nav-link" aria-haspopup="true">Programs <span class="caret">▼</span></a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="competitive.html">Competitive</a>
+                        <a href="recreational.html">Rec League</a>
+                        <a href="private-training.html">Private Training</a>
+                        <a href="summer-camps.html">Summer Camps</a>
+                    </div>
+                </div>
+                <a href="coaches.html" class="nav-link">Coaches</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="tryouts.html" class="nav-link active" aria-current="page">Tryouts</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div></div>
+    </nav>
+
+    <!-- ========================================
+     SITE-WIDE PROMO BANNER (Rec registration)
+     Remove this block from each page when the promo ends.
+     ======================================== -->
+    <div class="promo-banner" id="promo-banner" hidden>
+        <div class="promo-banner-inner">
+            <span class="promo-banner-text">
+                <i class="fas fa-bullhorn"></i>
+                <strong>Rec League registration is open</strong> — Fall 2026 season starts in August.
+            </span>
+            <a href="https://sportscampament.web.app/#" class="promo-banner-cta">Sign Up</a>
+            <button class="promo-banner-close" id="promo-banner-close" aria-label="Dismiss announcement">&times;</button>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var b = document.getElementById('promo-banner');
+            if (!b) return;
+            try { if (localStorage.getItem('recPromoDismissed') === '1') return; } catch (e) { }
+            b.hidden = false;
+            document.getElementById('promo-banner-close').addEventListener('click', function () {
+                b.hidden = true;
+                try { localStorage.setItem('recPromoDismissed', '1'); } catch (e) { }
+            });
+        })();
+    </script>
+
+
+    <h1 class="vh">Sentinels Soccer Club Competitive Tryouts — Morgan Hill & Gilroy</h1>
+
+<section id="tryouts" class="section tryout-section">
+        <div class="section-inner">
+            <h2>Comp <span class="accent">Tryouts</span></h2>
+            <div class="section-divider" style="background: var(--gold)"></div>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.7)">
+                Competitive tryouts run once a year each spring. The 2026 round is
+                now closed — here is what to expect when the next one opens.
+            </p>
+
+            <!-- ===== TRYOUTS ENDED NOTICE ===== -->
+            <div class="tryout-notice">
+                <div class="tryout-notice-content">
+                    <div class="tryout-notice-badge">
+                        <i class="fas fa-circle-check"></i> 2026 Tryouts Complete
+                    </div>
+                    <h3 class="tryout-notice-title">
+                        Competitive tryouts are closed for 2026 — but Rec League is open.
+                    </h3>
+                    <p class="tryout-notice-text">
+                        Our May 2026 tryout sessions have wrapped up and competitive rosters
+                        are set. <strong>Recreational registration is open right now</strong> for
+                        the Fall 2026 season starting in August — same coaches, same club, no
+                        tryout required. You can also join the list for next spring's tryouts.
+                    </p>
+                    <div class="tryout-notice-actions">
+                        <a href="https://sportscampament.web.app/#" class="btn-tryout btn-tryout--primary">
+                            <i class="fas fa-futbol"></i>
+                            Sign Up for Rec League
+                        </a>
+                        <a href="contact.html" class="btn-tryout btn-tryout--ghost">
+                            <i class="fas fa-clipboard-list"></i>
+                            Notify Me About 2027 Tryouts
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== PAST SEASON REFERENCE =====
+                 Everything below documents the completed 2026 round so families
+                 can plan for 2027. Update dates/poster when 2027 opens. -->
+            <h3 style="color: var(--white); margin-top: 8px">
+                <i class="fas fa-clock-rotate-left" style="color: var(--gold); margin-right: 8px"></i>
+                What the 2026 Tryouts Looked Like
+            </h3>
+            <div class="section-divider" style="background: var(--gold)"></div>
+            <p style="color: rgba(255,255,255,0.72); max-width: 760px; margin-bottom: 28px">
+                For reference only — these sessions have already taken place. Dates,
+                locations, and age groups for the 2027 round will be posted here once
+                confirmed.
+            </p>
+
+            <!-- ===== TOP ROW: Poster (left) + Info (right) — 50/50 ===== -->
+            <div class="tryout-top-row">
+                <!-- Left: Poster -->
+                <div class="tryout-poster">
+                    <img src="./images/poster-tryouts-elevate-1200.png"
+                        alt="Sentinels 2026 competitive tryout flyer — past season reference" loading="lazy"
+                        style="opacity: 0.75" />
+                </div>
+
+                <!-- Right: General Info -->
+                <div class="tryout-info-panel">
+                    <h3 style="margin-top: 0">
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 6px"></i>
+                        Locations
+                    </h3>
+                    <ul>
+                        <li>
+                            <strong>Christmas Hill Park</strong> — Ranch
+                            Site Addition, 7049 Miller Ave, Gilroy
+                        </li>
+                        <li>
+                            <strong>Morgan Hill Adult School</strong> —
+                            17960 Monterey Rd, Morgan Hill
+                        </li>
+                    </ul>
+
+                    <h3>
+                        <i class="fas fa-users" style="color: var(--gold); margin-right: 6px"></i>
+                        Birth Years
+                    </h3>
+                    <p>2009 – 2019 (Boys &amp; Girls)</p>
+
+                    <h3>
+                        <i class="fas fa-bag-shopping" style="color: var(--gold); margin-right: 6px"></i>
+                        What to Bring
+                    </h3>
+                    <ul>
+                        <li>Shin guards</li>
+                        <li>Water bottle</li>
+                        <li>Completed registration form</li>
+                    </ul>
+
+                    <a href="https://docs.google.com/forms/d/1mzAFGweWasPEXfDIH94gcAn0OfqAIF6Qw3h9ueQyOTM/viewform?edit_requested=true"
+                        target="_blank" rel="noopener noreferrer" class="btn-tryout"><i
+                            class="fas fa-clipboard-list"></i> Registration
+                        Form</a>
+
+                    <div class="tryout-badge">
+                        <i class="fas fa-shield-halved"></i> NorCal Premier
+                        Soccer Affiliated
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== BOTTOM ROW: Girls (left) + Boys (right) — 50/50 ===== -->
+            <div class="tryout-schedule-row">
+                <details class="tryout-column">
+                    <summary class="tryout-column-header tryout-column-header--girls">
+                        <span class="tryout-column-title">
+                            <i class="fas fa-venus"></i> Girls' Tryouts
+                        </span>
+                        <i class="fas fa-chevron-down tryout-chevron"></i>
+                    </summary>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 19, 21,
+                            26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2009, 2010,
+                                    2011, 2012</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:30 – 7:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2013,
+                                    2014</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:00 – 7:00 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2015,
+                                    2016</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:30 – 7:00 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2017, 2018,
+                                    2019</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">4:45 – 5:45 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="tryout-column">
+                    <summary class="tryout-column-header tryout-column-header--boys">
+                        <span class="tryout-column-title">
+                            <i class="fas fa-mars"></i> Boys' Tryouts
+                        </span>
+                        <i class="fas fa-chevron-down tryout-chevron"></i>
+                    </summary>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 19, 21,
+                            26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2009,
+                                    2010</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">6:00 – 7:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 19, 21,
+                            26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2011,
+                                    2012</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:00 – 7:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i> Morgan
+                                Hill Adult School, Morgan Hill
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Year</span><span class="tryout-value">2013</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:00 – 6:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 12,
+                            19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Year</span><span class="tryout-value">2014</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:00 – 7:00 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Year</span><span class="tryout-value">2015</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:00 – 7:00 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Year</span><span class="tryout-value">2016</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">4:45 – 6:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2017,
+                                    2018</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:00 – 6:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tryout-card">
+                        <div class="tryout-card-header">
+                            <i class="fas fa-calendar-days"></i> May 5, 7,
+                            12, 14, 19, 21, 26, 28
+                        </div>
+                        <div class="tryout-card-body">
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Birth Years</span><span class="tryout-value">2019,
+                                    2020</span>
+                            </div>
+                            <div class="tryout-card-detail">
+                                <span class="tryout-label">Time</span><span class="tryout-value">5:30 – 6:30 PM</span>
+                            </div>
+                            <div class="tryout-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Christmas Hill Park, Gilroy
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-inner">
+            <img src="./images/site-logo-1.png" alt="Sentinels Soccer Club" />
+            <nav class="footer-nav" aria-label="Site pages">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="competitive.html">Competitive</a>
+                <a href="recreational.html">Rec League</a>
+                <a href="private-training.html">Private Training</a>
+                <a href="summer-camps.html">Summer Camps</a>
+                <a href="coaches.html">Coaches</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="tryouts.html">Tryouts</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="copyright">
+                &copy; 2015–2026 Sentinels Soccer Club
+            </div>
+            <div class="credit">Web Design by @SergioAguilar</div>
+            <!-- <div class="pplx-link">
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity
+          Computer</a>
+      </div> -->
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile nav after clicking a link (skip dropdown parent)
+        document.querySelectorAll(".nav-links .nav-link").forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (!link.closest(".has-dropdown")) {
+                    document.querySelector(".nav-links").classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

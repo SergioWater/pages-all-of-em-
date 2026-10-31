@@ -1,0 +1,20 @@
+What was wrong
+Local file permissions — id_rsa had Windows ACL entries for NT AUTHORITY\Authenticated Users and BUILTIN\Users, which OpenSSH refuses to trust for a private key. It was silently falling back to password auth (which you don't have) instead of using the key.
+The key has a passphrase — confirmed by testing ssh-keygen -y on it, which hung waiting on a real terminal prompt instead of returning instantly. My earlier test used -o BatchMode=yes, which suppresses passphrase prompts — so the key was being offered, accepted by the server, then silently failing to sign because it couldn't ask you for the passphrase.
+What I fixed
+Ran on D:\001_websites\lushessences\.ssh\id_rsa:
+icacls "D:\001_websites\lushessences\.ssh\id_rsa" /inheritance:r
+icacls "D:\001_websites\lushessences\.ssh\id_rsa" /grant:r "sergio:(R)"
+icacls "D:\001_websites\lushessences\.ssh\id_rsa" /grant:r "SYSTEM:(F)"
+icacls "D:\001_websites\lushessences\.ssh\id_rsa" /grant:r "Administrators:(F)"
+
+Open PowerShell yourself and run:
+ssh -i "D:\001_websites\lushessences\.ssh\id_rsa" -p 2222 jrfxwzte@jrf.xwz.temporary.site
+
+
+scp -i "D:\001_websites\lushessences\.ssh\id_rsa" -P 2222 -r "D:\001_websites\lushessences\_upload_staging\." jrfxwzte@jrf.xwz.temporary.site:~/public_html/website_76b84fb8/
+
+This is the part your notes file already had right — folders and files need different permissions on a web server (755 vs 644), and scp doesn't set that reliably for you. Back in the SSH terminal, after the transfer finishes:
+cd ~/public_html/website_76b84fb8
+find . -type d -exec chmod 755 {} \;
+find . -type f -exec chmod 644 {} \;

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-label="Chuck NORRIS">
+  <rect width="240" height="300" fill="#161616"/>
+  <circle cx="120" cy="120" r="62" fill="#9c3320"/>
+  <text x="120" y="144" text-anchor="middle" font-family="Georgia, 'Yu Mincho', serif" font-size="54" fill="#ffffff">c</text>
+  <text x="120" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" letter-spacing="3">CN</text>
+  <text x="120" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#b0b0b0" letter-spacing="2">KENSEI JUDO</text>
+</svg>

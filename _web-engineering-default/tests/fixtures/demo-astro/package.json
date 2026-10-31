@@ -1,0 +1,2 @@
+{ "name": "demo-astro", "dependencies": { "astro": "^5.0.0" },
+  "scripts": { "build": "astro build", "typecheck": "astro check" } }

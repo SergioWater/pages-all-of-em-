@@ -1,0 +1,29 @@
+{
+  "name": "sentinals-soccer-club-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/solid-js": "^5.0.4",
+    "solid-js": "^1.9.3",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "astro": "^5.10.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
+  }
+}

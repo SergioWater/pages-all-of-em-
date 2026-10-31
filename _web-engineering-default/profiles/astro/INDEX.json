@@ -1,0 +1,53 @@
+{
+  "profile": "astro",
+  "version": "1.0.0",
+  "entry": "PROFILE.md",
+  "docs": [
+    { "path": "architecture.md", "title": "Architecture & routing layers" },
+    { "path": "routing-layouts.md", "title": "Layouts & component conventions" },
+    { "path": "islands-hydration.md", "title": "Islands & hydration standard (census)" },
+    { "path": "styling-three-sheets.md", "title": "Three-sheet styling doctrine" },
+    { "path": "images-fonts.md", "title": "Images & fonts discipline" },
+    { "path": "content-metadata.md", "title": "Content collections & metadata/schema" },
+    { "path": "forms-analytics.md", "title": "Forms & analytics posture" },
+    { "path": "typescript-config.md", "title": "TypeScript & tooling config" },
+    { "path": "deployment-conventions.md", "title": "Deployment, caching, git conventions" }
+  ],
+  "rules": [
+    { "id": "ASTRO-HYD-001", "title": "Never client:load/client:idle", "severity": "high", "classification": "PROVEN GOOD", "detection": "hydration_census.py" },
+    { "id": "ASTRO-HYD-002", "title": "Island budget ~5 with justification", "severity": "medium", "classification": "PROVEN GOOD", "detection": "hydration_census.py" },
+    { "id": "ASTRO-HYD-003", "title": "Micro-scripts over islands for trivial interactivity", "severity": "low", "classification": "PROVEN GOOD", "detection": "hydration_census.py" },
+    { "id": "ASTRO-IMG-001", "title": "Lazy default; eager+fetchpriority heroes only", "severity": "medium", "classification": "PROVEN GOOD", "detection": "assets_audit.py" },
+    { "id": "ASTRO-IMG-002", "title": "Explicit image dimensions", "severity": "medium", "classification": "PROVEN GOOD", "detection": "assets_audit.py" },
+    { "id": "ASTRO-IMG-003", "title": "Descriptive alt text", "severity": "medium", "classification": "PROVEN GOOD", "detection": "assets_audit.py" },
+    { "id": "ASTRO-FNT-001", "title": "Self-hosted fonts; no blocking third-party font CSS", "severity": "high", "classification": "ANTI-PATTERN", "detection": "assets_audit.py" },
+    { "id": "ASTRO-CSS-001", "title": "Three-sheet doctrine; one design system", "severity": "high", "classification": "PROVEN GOOD", "detection": null },
+    { "id": "ASTRO-CSS-002", "title": "Wired class names are API — never rename", "severity": "critical", "classification": "ANTI-PATTERN", "detection": "class_churn_check.py" },
+    { "id": "ASTRO-META-001", "title": "Canonical identity from Astro.site on production host", "severity": "critical", "classification": "ANTI-PATTERN", "detection": "canonical_host_check.py" },
+    { "id": "ASTRO-META-002", "title": "Segment-only titles composed once in BaseHead", "severity": "low", "classification": "PROVEN GOOD", "detection": "metadata_audit.py" },
+    { "id": "ASTRO-META-003", "title": "JSON-LD from confirmed facts; OWNER_CONFIRM never ships", "severity": "critical", "classification": "PROVEN GOOD", "detection": "jsonld_validate.py" },
+    { "id": "ASTRO-CNT-001", "title": "Zod-validated content collections", "severity": "medium", "classification": "PROVEN GOOD", "detection": null },
+    { "id": "ASTRO-TSC-001", "title": "Strict TS + astro check in DoD", "severity": "low", "classification": "PROVEN GOOD", "detection": "build_gate.py" },
+    { "id": "ASTRO-DEP-001", "title": "robots.txt ↔ sitemap-index on production host", "severity": "medium", "classification": "PROVEN GOOD", "detection": "robots_sitemap_check.py" }
+  ],
+  "examples": [
+    "examples/base-head-seo/",
+    "examples/jsonld-local-business/",
+    "examples/checkbox-nav/",
+    "examples/gallery-island/",
+    "examples/deferred-third-party/",
+    "examples/faq-single-source/",
+    "examples/three-sheet-tokens/",
+    "examples/pre-sized-srcset/"
+  ],
+  "antiPatterns": [
+    "anti-patterns/AP-canonical-host-poisoning.md",
+    "anti-patterns/AP-render-blocking-font-import.md",
+    "anti-patterns/AP-css-churn-during-content-work.md",
+    "anti-patterns/AP-mojibake-migration.md",
+    "anti-patterns/AP-bg-image-hero.md",
+    "anti-patterns/AP-committed-secrets.md",
+    "anti-patterns/AP-title-doubling.md",
+    "anti-patterns/AP-eager-hydration.md"
+  ]
+}

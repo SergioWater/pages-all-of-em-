@@ -1,0 +1,41 @@
+---
+import { CONTACT } from "../consts";
+---
+
+<div class="promo-banner" id="promo-banner" hidden>
+  <div class="promo-banner-inner">
+    <span class="promo-banner-text">
+      <i class="fas fa-bullhorn"></i>
+      <strong>Rec League registration is open</strong> — Fall 2026 season starts
+      in August.
+    </span>
+    <a href={CONTACT.registrationUrl} class="promo-banner-cta">Sign Up</a>
+    <button
+      class="promo-banner-close"
+      id="promo-banner-close"
+      type="button"
+      aria-label="Dismiss announcement">&times;</button
+    >
+  </div>
+</div>
+
+<script>
+  const b = document.getElementById("promo-banner");
+  if (b) {
+    try {
+      if (localStorage.getItem("recPromoDismissed") !== "1") {
+        b.hidden = false;
+      }
+    } catch {
+      b.hidden = false;
+    }
+    document.getElementById("promo-banner-close")?.addEventListener("click", () => {
+      b.hidden = true;
+      try {
+        localStorage.setItem("recPromoDismissed", "1");
+      } catch {
+        /* ignore */
+      }
+    });
+  }
+</script>

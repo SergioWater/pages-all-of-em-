@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs — Futsal Training, Youth Development &amp; NFPL Squads | HBK Futsal</title>
+  <meta name="description" content="Train with HBK Futsal in San Jose — skills training, youth development pathway for boys and girls, and elite men's and women's NFPL squads." />
+  <link rel="canonical" href="https://www.hbkfutsal.com/programs.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Programs — Train with HBK Futsal" />
+  <meta property="og:description" content="Skills training, youth development, and elite NFPL squads — there's a place for every player." />
+  <meta property="og:url" content="https://www.hbkfutsal.com/programs.html" />
+  <meta property="og:image" content="https://www.hbkfutsal.com/assets/skills-program.jpg" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="HBK Futsal home">
+        <img src="assets/logo.png" alt="HBK Futsal logo" class="nav__logo" />
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">HBK Futsal</span>
+          <span class="nav__brand-sub">Humble Ballers Klub</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" class="nav__link" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="teams.html">Teams</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="coaches.html">Coaches</a></li>
+        <li role="none"><a role="menuitem" class="nav__link nav__link--active" href="programs.html">Programs</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="schedule.html">Schedule</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="sponsors.html">Sponsors</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="portal.html">Portal</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <p class="page-hero__eyebrow">Train with HBK</p>
+    <h1 class="page-hero__title">Programs</h1>
+    <p class="page-hero__lede">From elite squads to youth development and individual skills training — there's a place for every player.</p>
+  </section>
+
+  <section class="section section--cream">
+    <div class="section__inner">
+      <div class="program-cards">
+        <div class="program">
+          <div class="program__img"><img src="assets/why-hbk.jpg" alt="HBK Futsal skills training session" /></div>
+          <div class="program__body">
+            <h2 class="program__title">Skills Training</h2>
+            <p>Technical sessions focused on first touch, finishing, and 1v1 mastery. Open to all levels.</p>
+          </div>
+        </div>
+        <div class="program">
+          <div class="program__img"><img src="assets/skills-program.jpg" alt="HBK Futsal youth development pathway" /></div>
+          <div class="program__body">
+            <h2 class="program__title">Youth Development</h2>
+            <p>The HBK pathway for boys and girls — building futsal IQ and player identity from a young age.</p>
+          </div>
+        </div>
+        <div class="program">
+          <div class="program__img"><img src="assets/conference-champions.jpg" alt="HBK Futsal NFPL conference champions" /></div>
+          <div class="program__body">
+            <h2 class="program__title">NFPL Squads</h2>
+            <p>The competitive heart of HBK — men's and women's national-level squads competing across the country.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="center mt-48">
+        <a class="hero__cta" href="index.html#contact">Ask About Tryouts &amp; Training</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">© 2026 HBK Futsal · Humble Ballers Klub · <a href="index.html">hbkfutsal.com</a> · <a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">@hbkfutbol</a></div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav__toggle');
+      const menu = document.querySelector('.nav__menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    })();
+
+    // Scroll reveal — sections and cards fade/rise into view. Skipped for
+    // reduced-motion users; without JS everything is simply visible.
+    (function() {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll([
+        '.page-hero__eyebrow', '.page-hero__title', '.page-hero__lede',
+        '.section__eyebrow', '.section__title', '.section__lede',
+        '.nationals > *', '.welcome > *', '.women-squad', '.squad-divider',
+        '.player', '.coach-card', '.program', '.schedule__row', '.match-poster',
+        '.signing-card', '.ig-tile', '.sponsor > *', '.contact > *',
+        '.hub-card', '.portal-card', '.portal-client', '.roster-search', '.sponsor-wall > *'
+      ].join(','));
+      if (!targets.length) return;
+      targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i % 4) * 70 + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.classList.add('is-revealed');
+          io.unobserve(el);
+          const done = () => { el.classList.remove('reveal'); el.style.transitionDelay = ''; };
+          el.addEventListener('transitionend', done, { once: true });
+          setTimeout(done, 1000);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

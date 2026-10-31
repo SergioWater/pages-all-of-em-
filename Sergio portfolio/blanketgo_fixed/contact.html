@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Sergio Aguilar</title>
+  <meta name="description" content="Get in touch with Sergio Aguilar about software projects, roles, or collaboration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260908-3">
+</head>
+<body>
+  <main class="contact-page">
+    <div class="contact-card">
+      <a class="back-home" href="index.html">&larr; Back to work</a>
+      <div class="eyebrow">Let's talk</div>
+      <h1>Get in touch</h1>
+      <p class="sub">Have a project in mind or a role to discuss? I'd be glad to hear about it.</p>
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" maxlength="120" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" autocomplete="email" maxlength="254" type="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" maxlength="3000" placeholder="What are you building?" required></textarea>
+        </div>
+        <button class="btn btn-gold contact-submit" type="submit">Open email draft</button>
+        <p class="contact-foot" id="contact-status" role="status">Opens your email app. You can review the draft before sending.</p>
+      </form>
+      <p class="contact-foot">Or reach me directly on <a id="gh-link" target="_blank" rel="noopener">GitHub</a> · <a id="li-link" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </main>
+
+  <script src="app.js?v=20260908-3" defer></script>
+</body>
+</html>

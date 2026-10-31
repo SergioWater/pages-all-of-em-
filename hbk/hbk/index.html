@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBK Futsal — The Official Home of HBK Futsal</title>
+  <meta name="description" content="HBK Futsal — Humble Ballers Klub. NFPL men's and women's futsal club based in San Jose, California." />
+  <link rel="canonical" href="https://www.hbkfutsal.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HBK Futsal — The Official Home of HBK Futsal" />
+  <meta property="og:description" content="Humble Ballers Klub — NFPL men's and women's futsal club based in San Jose, California. Headed to the 2026 U.S. Futsal Nationals in Las Vegas." />
+  <meta property="og:url" content="https://www.hbkfutsal.com/" />
+  <meta property="og:image" content="https://www.hbkfutsal.com/assets/mens-squad.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Space intro gate: plays once per session, never for reduced-motion
+    // users, and adds .intro--play before first paint so neither state flashes.
+    // Without JS the class is never added and the normal hero renders.
+    (function () {
+      var KEY = 'hbk-intro-seen';
+      var seen = false;
+      try { seen = !!sessionStorage.getItem(KEY); } catch (e) {}
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!seen && !reduced) {
+        document.documentElement.classList.add('intro--play');
+        try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ========================== NAV ========================== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand" aria-label="HBK Futsal home">
+        <img src="assets/logo.jpg" alt="HBK Futsal logo" class="nav__logo" />
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">HBK Futsal</span>
+          <span class="nav__brand-sub">Humble Ballers Klub</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" class="nav__link nav__link--active" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="#team">Team</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="#coaches">Coaches &amp; Staff</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="#programs">Programs</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="#schedule">Schedule</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="#instagram">Instagram</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="portal.html">Portal</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========================== HERO ========================== -->
+  <section id="home" class="hero">
+    <!-- Space intro — plays once per session (gated by the script in <head>).
+         Decorative overlay: aria-hidden, pointer-events none, display:none by default. -->
+    <div class="hero__space" aria-hidden="true">
+      <div class="hero__stars hero__stars--far"></div>
+      <div class="hero__stars hero__stars--near"></div>
+      <div class="hero__planet">
+        <div class="hero__planet-arrive">
+          <!-- Inline copy of assets/logo.svg — keep the two in sync. -->
+          <svg id="hbk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="hbk-logo-title">
+            <title id="hbk-logo-title">HBK Futsal logo — wireframe planet with orbital ring and HBK wordmark</title>
+            <g id="logo-stars" fill="#ffffff">
+              <g class="logo-star logo-star--1">
+                <path transform="translate(302 100) scale(1.05)" d="M0,-16 C2,-4.5 4.5,-2 16,0 C4.5,2 2,4.5 0,16 C-2,4.5 -4.5,2 -16,0 C-4.5,-2 -2,-4.5 0,-16 Z"/>
+              </g>
+              <g class="logo-star logo-star--2">
+                <path transform="translate(92 158) scale(0.66)" d="M0,-16 C2,-4.5 4.5,-2 16,0 C4.5,2 2,4.5 0,16 C-2,4.5 -4.5,2 -16,0 C-4.5,-2 -2,-4.5 0,-16 Z"/>
+              </g>
+              <g class="logo-star logo-star--3">
+                <path transform="translate(284 294) scale(0.5)" d="M0,-16 C2,-4.5 4.5,-2 16,0 C4.5,2 2,4.5 0,16 C-2,4.5 -4.5,2 -16,0 C-4.5,-2 -2,-4.5 0,-16 Z"/>
+              </g>
+            </g>
+            <g id="logo-ring-back" class="logo-ring-part" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+              <path d="M339.1 149.4 A148 40 -20 0 0 60.9 250.6"/>
+            </g>
+            <g id="logo-sphere" fill="none" stroke="#ffffff">
+              <circle class="logo-limb" cx="200" cy="200" r="100" stroke-width="1.5" opacity="0.95"/>
+              <g class="logo-parallels" stroke-width="1.2" opacity="0.8">
+                <ellipse cx="200" cy="200"   rx="100"  ry="24"/>
+                <ellipse cx="200" cy="166.8" rx="94"   ry="22.6"/>
+                <ellipse cx="200" cy="233.2" rx="94"   ry="22.6"/>
+                <ellipse cx="200" cy="137.6" rx="76.6" ry="18.4"/>
+                <ellipse cx="200" cy="262.4" rx="76.6" ry="18.4"/>
+                <ellipse cx="200" cy="116"   rx="50"   ry="12"/>
+                <ellipse cx="200" cy="284"   rx="50"   ry="12"/>
+                <ellipse cx="200" cy="105.1" rx="20.8" ry="5"/>
+                <ellipse cx="200" cy="294.9" rx="20.8" ry="5"/>
+              </g>
+              <g class="logo-meridians" stroke-width="1.2" opacity="0.8">
+                <ellipse class="logo-meridian" style="--phase: 0deg"   cx="200" cy="200" rx="100" ry="100"/>
+                <ellipse class="logo-meridian" style="--phase: 30deg"  cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.866 1) translate(-200 -200)"/>
+                <ellipse class="logo-meridian" style="--phase: 60deg"  cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.5 1) translate(-200 -200)"/>
+                <ellipse class="logo-meridian" style="--phase: 90deg"  cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.012 1) translate(-200 -200)"/>
+                <ellipse class="logo-meridian" style="--phase: 120deg" cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.5 1) translate(-200 -200)"/>
+                <ellipse class="logo-meridian" style="--phase: 150deg" cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.866 1) translate(-200 -200)"/>
+              </g>
+            </g>
+            <g id="logo-ring" class="logo-ring-part" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+              <path d="M339.1 149.4 A148 40 -20 0 1 60.9 250.6"/>
+            </g>
+            <g id="logo-wordmark" fill="#ffffff">
+              <path d="M125,171 H139 V193 H151 V171 H165 V229 H151 V207 H139 V229 H125 Z"/>
+              <path fill-rule="evenodd" d="M181,171 H204 Q219,171 219,186 V191 Q219,200 212,202 Q219,204 219,213 V214 Q219,229 204,229 H181 Z M195,185 H201 Q207,185 207,190 V191 Q207,194 204,194 H195 Z M195,210 H201 Q207,210 207,215 V216 Q207,219 204,219 H195 Z"/>
+              <path d="M235,171 H249 V193 L263,171 H276 L258,198 L276,229 H263 L249,204 V229 H235 Z"/>
+            </g>
+            <g id="logo-badge" fill="none" stroke="#ffffff" stroke-width="2.5">
+              <circle cx="200" cy="200" r="185" pathLength="1000"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="hero__slides" aria-hidden="true">
+      <div class="hero__slide is-active" style="background-image: url('assets/women-squad.jpg');"></div>
+      <div class="hero__slide" style="background-image: url('assets/mens-squad.jpg');"></div>
+    </div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">The Official Home of</p>
+      <h1 class="hero__title">HBK Futsal</h1>
+      <p class="hero__tag">One club. Two squads. One mission.</p>
+      <a href="#team" class="hero__cta">Meet the Players</a>
+    </div>
+    <div class="hero__dots">
+      <button class="hero__dot is-active" data-slide="0" aria-label="Women's squad"></button>
+      <button class="hero__dot" data-slide="1" aria-label="Men's squad"></button>
+    </div>
+  </section>
+
+  <!-- ========================== SPONSOR STRIP (ticker under the hero) ========================== -->
+  <aside class="sponsor-strip" aria-label="Sponsors">
+    <p class="sponsor-strip__label">Proud Partners</p>
+    <!-- SPONSOR MARQUEE — one <li> per sponsor; the script repeats the set for a
+         seamless loop. Keep the three copies in sync: index.html (this strip +
+         the #sponsor section below) and sponsors.html. See README.md. -->
+    <div class="sponsor-marquee" aria-label="Our sponsors">
+      <div class="sponsor-marquee__track">
+        <ul class="sponsor-marquee__set">
+          <li class="sponsor-marquee__slot"><img class="sponsor-wall__img--blend" src="assets/sponsors/archxsuite.jpeg" alt="Archxsuite" /></li>
+          <li class="sponsor-marquee__slot"><span class="sponsor-wall__name">Sali LLA</span></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+<!-- Widget-->
+  
+ 
+  <!-- ========================== NATIONALS ========================== -->
+  <section class="section section--navy">
+    <div class="section__inner">
+      <p class="section__eyebrow" style="color: var(--accent);">2026 · Las Vegas</p>
+      <h2 class="section__title">Headed to Nationals</h2>
+      <p class="section__lede">HBK is competing at the 40th U.S. Futsal National Championship at Mandalay Bay, Las Vegas, Nevada.</p>
+      <div class="nationals">
+        <div class="nationals__flyer">
+          <img src="assets/nationals-2026.jpg" alt="2026 U.S. Futsal National Championship — 40th Anniversary, Mandalay Bay, Las Vegas, NV" />
+        </div>
+        <div class="nationals__info">
+          <p class="nationals__eyebrow">U.S. Futsal National Championship</p>
+          <h3 class="nationals__title">40th National<br/>Championship</h3>
+          <div class="nationals__meta">
+            <div class="nationals__meta-row">
+              <span class="nationals__meta-label">Event</span>
+              <span class="nationals__meta-value">U.S. Futsal Nationals — 40th Anniversary</span>
+            </div>
+            <div class="nationals__meta-row">
+              <span class="nationals__meta-label">Venue</span>
+              <span class="nationals__meta-value">Mandalay Bay · Las Vegas, NV</span>
+            </div>
+            <div class="nationals__meta-row">
+              <span class="nationals__meta-label">Year</span>
+              <span class="nationals__meta-value">2026</span>
+            </div>
+            <div class="nationals__meta-row">
+              <span class="nationals__meta-label">Representing</span>
+              <span class="nationals__meta-value">HBK Futsal · San Jose, CA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== WELCOME / ABOUT ========================== -->
+  <section class="section section--cream">
+    <div class="section__inner">
+      <div class="welcome">
+        <div>
+          <p class="welcome__eyebrow">Welcome to HBK</p>
+          <h2 class="welcome__title">Humble Ballers Klub</h2>
+          <div class="welcome__body">
+            <p>HBK Futsal is more than a team — we're a community built around skill, discipline, and the love of the game. From our men's and women's NFPL squads to our youth pathway, every player wears the badge with pride.</p>
+            <p>Based in San Jose, California, we develop athletes who play the game the right way: technically sharp, mentally tough, and always humble.</p>
+          </div>
+        </div>
+        <div class="welcome__image">
+          <img src="assets/player-owner.jpg" alt="HBK Futsal player" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== TEAM ========================== -->
+  <section id="team" class="section section--cream-deep">
+    <div class="section__inner">
+      <p class="section__eyebrow">Current Roster · 2025–2026</p>
+      <h2 class="section__title">The Squad</h2>
+      <p class="section__lede">Meet the athletes representing HBK on the futsal court — our men's and women's NFPL rosters.</p>
+
+      <!-- Player search — filters both squads' roster rows and spotlight cards -->
+      <div class="roster-search">
+        <span class="roster-search__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </span>
+        <input type="search" class="roster-search__input" placeholder="Search players by name, number, or role…" aria-label="Search players by name, number, or role" />
+      </div>
+      <p class="roster-search__empty" hidden>No players match your search.</p>
+
+      <!-- MEN's PANEL — group photo + roster list first, raked photo grid below -->
+      <div class="squad-divider">
+        <span class="squad-divider__line"></span>
+        <span class="squad-divider__label">Men's Squad</span>
+        <span class="squad-divider__line"></span>
+      </div>
+      <div class="squad-panel is-active" id="panel-men">
+        <div class="women-squad" style="margin-bottom: 72px;">
+          <div class="women-squad__photo">
+            <img src="assets/mens-squad.jpg" alt="HBK Futsal Men's Squad" />
+          </div>
+          <div class="women-squad__list">
+            <h3>Men's NFPL Roster</h3>
+            <p class="sub">2025–2026 Season</p>
+            <ul class="women-squad__roster">
+              <li><span class="num">#0</span><span class="name">Alec Alvarado</span></li>
+              <li><span class="num">#1</span><span class="name">Edgar Pacheco</span></li>
+              <li><span class="num">#2</span><span class="name">Erick Luna</span></li>
+              <li><span class="num">#5</span><span class="name">Sterling Hancock</span></li>
+              <li><span class="num">#6</span><span class="name">Edgar Rivas</span><span class="roster-badge">New</span></li>
+              <li><span class="num">#7</span><span class="name">Devin Brown</span></li>
+              <li><span class="num">#8</span><span class="name">Rafael Manzo</span></li>
+              <li><span class="num">#9</span><span class="name">Allen Guillen</span></li>
+              <li><span class="num">#10</span><span class="name">Herlbert Soto</span></li>
+              <li><span class="num">#11</span><span class="name">Christian Vallin</span></li>
+              <li><span class="num">#12</span><span class="name">Lee Mitchell</span></li>
+              <li><span class="num">#13</span><span class="name">Alexander Bedoya</span></li>
+              <li><span class="num">#14</span><span class="name">Henry Scott</span></li>
+              <li><span class="num">#15</span><span class="name">Adrian Medina</span></li>
+              <li><span class="num">#16</span><span class="name">Bernard Vareskic</span></li>
+              <li><span class="num">#17</span><span class="name">Phi Nguyen</span></li>
+              <li><span class="num">#23</span><span class="name">Manuel Portillo</span></li>
+              <li><span class="num">#99</span><span class="name">D'Angelo Manzano</span><span class="roster-badge">New</span></li>
+              <li><span class="num">—</span><span class="name">Emir Hernandez</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="squad-divider">
+          <span class="squad-divider__line"></span>
+          <span class="squad-divider__label">Player Spotlight</span>
+          <span class="squad-divider__line"></span>
+        </div>
+
+        <!-- Back row (taller, 6 players) -->
+        <div class="tier tier--back">
+          <article class="player">
+            <img src="assets/players/Edgar-Pacheco.jpg" alt="Edgar Pacheco" />
+            <div class="player__overlay">
+              <div class="player__num">#1</div>
+              <div class="player__name">Edgar Pacheco</div>
+              <div class="player__role">Goalkeeper</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Alec-Alvarado.jpg" alt="Alec Alvarado" />
+            <div class="player__overlay">
+              <div class="player__num">#0</div>
+              <div class="player__name">Alec Alvarado</div>
+              <div class="player__role">Goalkeeper</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Bernard-Vareskic.jpg" alt="Bernard Vareskic" />
+            <div class="player__overlay">
+              <div class="player__num">#16</div>
+              <div class="player__name">Bernard Vareskic</div>
+              <div class="player__role">Pivot</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Herlbert-Soto.jpg" alt="Herlbert Soto" />
+            <div class="player__overlay">
+              <div class="player__num">#10</div>
+              <div class="player__name">Herlbert Soto</div>
+              <div class="player__role">Ala</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Alexander-Bedoya.jpg" alt="Alexander Bedoya" />
+            <div class="player__overlay">
+              <div class="player__num">#13</div>
+              <div class="player__name">Alexander Bedoya</div>
+              <div class="player__role">Ala</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Christian-Vallin.jpg" alt="Christian Vallin" />
+            <div class="player__overlay">
+              <div class="player__num">#11</div>
+              <div class="player__name">Christian Vallin</div>
+              <div class="player__role">Ala</div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Front row (5 players, offset for stadium feel) -->
+        <div class="tier tier--front">
+          <article class="player">
+            <img src="assets/players/Devin-brown.jpg" alt="Devin Brown" />
+            <div class="player__overlay">
+              <div class="player__num">#7</div>
+              <div class="player__name">Devin Brown</div>
+              <div class="player__role">Ala</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Emir-Hernandez.jpg" alt="Emir Hernandez" />
+            <div class="player__overlay">
+              <div class="player__num">#99</div>
+              <div class="player__name">Emir Hernandez</div>
+              <div class="player__role">Ala</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Henry-Scott.jpg" alt="Henry Scott" />
+            <div class="player__overlay">
+              <div class="player__num">#14</div>
+              <div class="player__name">Henry Scott</div>
+              <div class="player__role">Pivot</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Erick-Luna.jpg" alt="Erick Luna" />
+            <div class="player__overlay">
+              <div class="player__num">#2</div>
+              <div class="player__name">Erick Luna</div>
+              <div class="player__role">Ala</div>
+            </div>
+          </article>
+          <article class="player">
+            <img src="assets/players/Phi-Nyugen.jpg" alt="Phi Nguyen" />
+            <div class="player__overlay">
+              <div class="player__num">#17</div>
+              <div class="player__name">Phi Nguyen</div>
+              <div class="player__role">Pivot</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- WOMEN's PANEL — group photo + roster list -->
+      <div class="squad-divider" style="margin-top: 88px;">
+        <span class="squad-divider__line"></span>
+        <span class="squad-divider__label">Women's Squad</span>
+        <span class="squad-divider__line"></span>
+      </div>
+      <div class="squad-panel is-active" id="panel-women">
+        <div class="women-squad">
+          <div class="women-squad__photo">
+            <img src="assets/women-squad.jpg" alt="HBK Futsal Women's Squad" />
+          </div>
+          <div class="women-squad__list">
+            <h3>Women's NFPL Roster</h3>
+            <p class="sub">2025–2026 Season</p>
+            <ul class="women-squad__roster">
+              <li><span class="num">#0</span><span class="name">Alexia Estrada</span></li>
+              <li><span class="num">#1</span><span class="name">Juli Mendez</span></li>
+              <li><span class="num">#4</span><span class="name">Erin Brown</span></li>
+              <li><span class="num">#7</span><span class="name">Rebecca Lopez</span></li>
+              <li><span class="num">#8</span><span class="name">Megan Sequeira</span></li>
+              <li><span class="num">#9</span><span class="name">Kaia Mills</span></li>
+              <li><span class="num">#14</span><span class="name">Luz Arreaga</span></li>
+              <li><span class="num">#15</span><span class="name">Daniela Morales</span></li>
+              <li><span class="num">#16</span><span class="name">Karla Romero</span></li>
+              <li><span class="num">#17</span><span class="name">Bella Maldonado</span></li>
+              <li><span class="num">#21</span><span class="name">Nikki Latifi</span></li>
+              <li><span class="num">#27</span><span class="name">Yara Gomez</span></li>
+              <li><span class="num">#29</span><span class="name">Katelyn Nebesnick</span></li>
+              <li><span class="num">#99</span><span class="name">Sulma Plancarte</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="squad-divider">
+          <span class="squad-divider__line"></span>
+          <span class="squad-divider__label">Player Spotlight</span>
+          <span class="squad-divider__line"></span>
+        </div>
+
+        <!-- Back row (8 players) — logo-placeholder cards with readable overlay -->
+        <div class="tier tier--back tier--women-back">
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#0</div>
+              <div class="player__name">Alexia Estrada</div>
+              <div class="player__role">Goalkeeper</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#1</div>
+              <div class="player__name">Juli Mendez</div>
+              <div class="player__role">Goalkeeper</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#4</div>
+              <div class="player__name">Erin Brown</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#7</div>
+              <div class="player__name">Rebecca Lopez</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#8</div>
+              <div class="player__name">Megan Sequeira</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#9</div>
+              <div class="player__name">Kaia Mills</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#14</div>
+              <div class="player__name">Luz Arreaga</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#15</div>
+              <div class="player__name">Daniela Morales</div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Front row (6 players) -->
+        <div class="tier tier--front tier--women-front">
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#16</div>
+              <div class="player__name">Karla Romero</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#17</div>
+              <div class="player__name">Bella Maldonado</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#21</div>
+              <div class="player__name">Nikki Latifi</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#27</div>
+              <div class="player__name">Yara Gomez</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#29</div>
+              <div class="player__name">Katelyn Nebesnick</div>
+            </div>
+          </article>
+          <article class="player player--logo">
+            <div class="player__logo-bg" aria-hidden="true"></div>
+            <div class="player__overlay player__overlay--solid">
+              <div class="player__num">#99</div>
+              <div class="player__name">Sulma Plancarte</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== NEW SIGNINGS ========================== -->
+  <section id="signings" class="section section--navy">
+    <div class="section__inner">
+      <p class="section__eyebrow" style="color: var(--accent);">Transfer News · 2026</p>
+      <h2 class="section__title">New Signings &amp; Announcements</h2>
+      <p class="section__lede">Fresh faces in the Klub — reinforcements ahead of the U.S. Futsal National Championship in Las Vegas.</p>
+
+      <div class="signing-grid">
+        <article class="signing-card">
+          <a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">
+            <img src="assets/news/edgar-rivas-signed-panama.jpeg" alt="Edgar Rivas signed — Fixo/Cierre, Panama" loading="lazy" />
+          </a>
+          <div class="signing-card__body">
+            <p class="signing-card__role">Fixo / Cierre · Panama 🇵🇦</p>
+            <h3 class="signing-card__name">Edgar Rivas</h3>
+            <p class="signing-card__note">Panama National Team captain (2021–current) with three FIFA Futsal World Cups: Lithuania 2021 as captain, Colombia 2016, and Thailand 2012.</p>
+          </div>
+        </article>
+        <article class="signing-card">
+          <a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">
+            <img src="assets/news/dangelo-manzano-signed-usa.jpeg" alt="D'Angelo Manzano signed — Goalkeeper, USA" loading="lazy" />
+          </a>
+          <div class="signing-card__body">
+            <p class="signing-card__role">Goalkeeper · USA 🇺🇸</p>
+            <h3 class="signing-card__name">D'Angelo Manzano</h3>
+            <p class="signing-card__note">New #99 between the posts — signed for the national championship run in Las Vegas.</p>
+          </div>
+        </article>
+        <article class="signing-card">
+          <a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">
+            <img src="assets/news/victor-miramontes-technical-director.jpeg" alt="Victor Miramontes announced as Technical Director" loading="lazy" />
+          </a>
+          <div class="signing-card__body">
+            <p class="signing-card__role">Staff Announcement</p>
+            <h3 class="signing-card__name">Víctor Miramontes</h3>
+            <p class="signing-card__note">HBK announces Víctor Miramontes as Technical Director, shaping the club's playing identity across every squad.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== COACHES ========================== -->
+  <section id="coaches" class="section section--cream">
+    <div class="section__inner">
+      <p class="section__eyebrow">The People Behind HBK</p>
+      <h2 class="section__title">Coaches &amp; Staff</h2>
+      <p class="section__lede">Decades of combined futsal experience leading the men's and women's NFPL programs, the youth pathway, and everything in between.</p>
+
+      <div class="coach-grid">
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Miguel-Medina.jpg" alt="Miguel Medina" style="object-position: 70% 30%;" /></div>
+          <div>
+            <p class="coach-card__role">Founder &amp; Owner</p>
+            <h3 class="coach-card__name">Miguel Medina</h3>
+            <p class="coach-card__bio">As Founder and Owner of HBK Futsal, Miguel leads the club's vision, growth, and culture — day-to-day operations, recruitment, coaching structure, sponsorships, and media.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Miguel-Medina-Reyes.jpg" alt="Miguel Medina Reyes" /></div>
+          <div>
+            <p class="coach-card__role">Manager</p>
+            <h3 class="coach-card__name">Miguel Medina Reyes</h3>
+            <p class="coach-card__bio">Manages logistics, scheduling, and travel for the men's and women's squads. Keeps the operation running so coaches and players can focus on the game.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Victor-Miramontes.jpg" alt="Víctor Miramontes" /></div>
+          <div>
+            <p class="coach-card__role">Technical Director &amp; Men's Head Coach</p>
+            <h3 class="coach-card__name">Víctor Miramontes</h3>
+            <p class="coach-card__bio">Newly announced Technical Director. Leads the men's NFPL squad and shapes the tactical identity of the whole club — possession, pressing, and ruthless transitions.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Jeffrey-Serrano.jpg" alt="Jeffrey Serrano" /></div>
+          <div>
+            <p class="coach-card__role">Women's Head Coach</p>
+            <h3 class="coach-card__name">Jeffrey Serrano</h3>
+            <p class="coach-card__bio">Leads the women's NFPL squad. Focuses on technical development and competitive mentality from session one.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Sofia-Renteria.jpg" alt="Sofía Rentería" /></div>
+          <div>
+            <p class="coach-card__role">Women's Team Manager</p>
+            <h3 class="coach-card__name">Sofía Rentería</h3>
+            <p class="coach-card__bio">Runs day-to-day operations for the women's program — communication, travel, and player support.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Hyago-Galdino.jpg" alt="Hyago Galdino" /></div>
+          <div>
+            <p class="coach-card__role">Youth Boys Coach</p>
+            <h3 class="coach-card__name">Hyago Galdino</h3>
+            <p class="coach-card__bio">Leads the youth boys pathway. Develops the next generation of HBK players with a focus on fundamentals and game IQ.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <div class="coach-card__photo"><img src="assets/coaches/Andres-Fierro.jpg" alt="Andrés Fierro" /></div>
+          <div>
+            <p class="coach-card__role">Strength &amp; Conditioning</p>
+            <h3 class="coach-card__name">Andrés Fierro</h3>
+            <p class="coach-card__bio">Designs the strength and conditioning program — keeps players fit, fast, and durable across the long NFPL season.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== PROGRAMS ========================== -->
+  <section id="programs" class="section section--cream-deep">
+    <div class="section__inner">
+      <p class="section__eyebrow">Train with HBK</p>
+      <h2 class="section__title">Programs</h2>
+      <p class="section__lede">From elite squads to youth development and individual skills training — there's a place for every player.</p>
+
+      <div class="program-cards">
+        <div class="program">
+          <div class="program__img"><img src="assets/why-hbk.jpg" alt="Skills Training" /></div>
+          <div class="program__body">
+            <h3 class="program__title">Skills Training</h3>
+            <p>Technical sessions focused on first touch, finishing, and 1v1 mastery. Open to all levels.</p>
+          </div>
+        </div>
+        <div class="program">
+          <div class="program__img"><img src="assets/skills-program.jpg" alt="Youth Development" /></div>
+          <div class="program__body">
+            <h3 class="program__title">Youth Development</h3>
+            <p>The HBK pathway for boys and girls — building futsal IQ and player identity from a young age.</p>
+          </div>
+        </div>
+        <div class="program">
+          <div class="program__img"><img src="assets/conference-champions.jpg" alt="Elite Squads" /></div>
+          <div class="program__body">
+            <h3 class="program__title">NFPL Squads</h3>
+            <p>The competitive heart of HBK — men's and women's national-level squads competing across the country.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== SCHEDULE ========================== -->
+  <section id="schedule" class="section section--cream">
+    <div class="section__inner">
+      <p class="section__eyebrow">2025–2026 Season</p>
+      <h2 class="section__title">Schedule</h2>
+      <p class="section__lede">Key dates for the men's and women's NFPL squads, plus our trip to Nationals in Las Vegas.</p>
+
+      <div class="schedule">
+        <div class="schedule__row">
+          <div class="schedule__date">2026</div>
+          <div>
+            <div class="schedule__match">U.S. Futsal National Championship</div>
+            <div class="schedule__venue">40th Anniversary · HBK Men's &amp; Women's</div>
+          </div>
+          <div class="schedule__venue">Mandalay Bay · Las Vegas, NV</div>
+          <div><span class="schedule__tag schedule__tag--nationals">Nationals</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__date">TBA</div>
+          <div>
+            <div class="schedule__match">NFPL Regular Season Matches</div>
+            <div class="schedule__venue">Men's &amp; Women's home/away fixtures</div>
+          </div>
+          <div class="schedule__venue">Bay Area, CA</div>
+          <div><span class="schedule__tag">NFPL</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__date">TBA</div>
+          <div>
+            <div class="schedule__match">Pre-Season Friendlies</div>
+            <div class="schedule__venue">Tune-up matches before NFPL kickoff</div>
+          </div>
+          <div class="schedule__venue">San Jose, CA</div>
+          <div><span class="schedule__tag">Friendly</span></div>
+        </div>
+      </div>
+      <div class="match-posters mt-48">
+        <p class="section__eyebrow">Nationals · Match Schedules</p>
+        <div class="match-posters__grid">
+          <a class="match-poster" href="assets/news/hbk-men-match-schedule.jpeg" target="_blank" rel="noopener">
+            <img src="assets/news/hbk-men-match-schedule.jpeg" alt="HBK Men match schedule — U.S. Futsal Nationals, Mandalay Bay, Las Vegas" loading="lazy" />
+            <span class="match-poster__label">Men</span>
+          </a>
+          <a class="match-poster" href="assets/news/hbk-women-match-schedule.jpeg" target="_blank" rel="noopener">
+            <img src="assets/news/hbk-women-match-schedule.jpeg" alt="HBK Women match schedule — U.S. Futsal Nationals, Mandalay Bay, Las Vegas" loading="lazy" />
+            <span class="match-poster__label">Women</span>
+          </a>
+          <a class="match-poster" href="assets/news/hbk-u19b-match-schedule.jpeg" target="_blank" rel="noopener">
+            <img src="assets/news/hbk-u19b-match-schedule.jpeg" alt="HBK U19B match schedule — U.S. Futsal Nationals, Mandalay Bay, Las Vegas" loading="lazy" />
+            <span class="match-poster__label">U19 Boys</span>
+          </a>
+        </div>
+      </div>
+      <p class="center mt-32" style="font-size: 13px; color: var(--muted);">Full match dates and times will be announced as the season approaches.</p>
+    </div>
+  </section>
+
+  <!-- ========================== INSTAGRAM ========================== -->
+  <section id="instagram" class="section section--cream-deep">
+    <div class="section__inner">
+      <p class="section__eyebrow">Follow the Klub</p>
+      <h2 class="section__title">@hbkfutbol on Instagram</h2>
+      <p class="section__lede">Signings, match days, and everything HBK — straight from the court to your feed.</p>
+
+      <div class="ig-grid">
+        <a class="ig-tile" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener" aria-label="HBK on Instagram — Edgar Rivas signed">
+          <img src="assets/news/edgar-rivas-signed-panama.jpeg" alt="Edgar Rivas signed" loading="lazy" />
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener" aria-label="HBK on Instagram — Edgar Rivas career accolades">
+          <img src="assets/news/edgar-rivas-career-accolades.jpeg" alt="Edgar Rivas career accolades and highlights" loading="lazy" />
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener" aria-label="HBK on Instagram — new signing welcome">
+          <img src="assets/news/welcome-to-hbk-new-signing.jpeg" alt="Welcome to HBK — new signing for the national futsal in Las Vegas" loading="lazy" />
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener" aria-label="HBK on Instagram — D'Angelo Manzano signed">
+          <img src="assets/news/dangelo-manzano-signed-usa.jpeg" alt="D'Angelo Manzano signed" loading="lazy" />
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener" aria-label="HBK on Instagram — Victor Miramontes technical director">
+          <img src="assets/news/victor-miramontes-technical-director.jpeg" alt="Víctor Miramontes announced as Technical Director" loading="lazy" />
+        </a>
+        <a class="ig-tile" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener" aria-label="HBK on Instagram — men's match schedule">
+          <img src="assets/news/hbk-men-match-schedule.jpeg" alt="HBK men's match schedule" loading="lazy" />
+        </a>
+      </div>
+
+      <p class="center mt-32">
+        <a class="hero__cta" href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">Follow @hbkfutbol</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================== SPONSORS (dedicated wall) ========================== -->
+  <section id="sponsor" class="section section--cream">
+    <div class="section__inner">
+      <p class="section__eyebrow">Our Partners</p>
+      <h2 class="section__title">Our Sponsors</h2>
+      <p class="section__lede">The brands backing HBK Futsal on the road to nationals.</p>
+
+      <!-- SPONSOR MARQUEE — same ticker as the strip under the hero.
+           Keep all three copies in sync (index top strip, here, sponsors.html). -->
+      <div class="sponsor-marquee" aria-label="Our sponsors">
+        <div class="sponsor-marquee__track">
+          <ul class="sponsor-marquee__set">
+            <li class="sponsor-marquee__slot"><img class="sponsor-wall__img--blend" src="assets/sponsors/archxsuite.jpeg" alt="Archxsuite" /></li>
+            <li class="sponsor-marquee__slot"><span class="sponsor-wall__name">Sali LLA</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="center mt-48">
+        <a class="hero__cta" href="sponsors.html">Become a Sponsor</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================== CONTACT (casual) ========================== -->
+  <section id="contact" class="section section--cream">
+    <div class="section__inner">
+      <div class="contact">
+        <h2 class="contact__title">Contact</h2>
+        <p class="contact__lede">Questions, tryouts, or partnerships? Reach out.</p>
+        <div class="contact__rows">
+          <div><a href="tel:+16693503341">669-350-3341</a></div>
+          <div><a href="https://www.hbkfutsal.com">www.hbkfutsal.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== FOOTER ========================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">
+          <img src="assets/logo.jpg" alt="HBK Futsal" />
+          <span class="footer__brand-name">HBK Futsal</span>
+        </div>
+        <p class="footer__about">Humble Ballers Klub — NFPL men's and women's futsal club. Built in San Jose, California.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Explore</p>
+        <ul class="footer__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#coaches">Coaches &amp; Staff</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="portal.html">Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Reach out</p>
+        <ul class="footer__links">
+          <li><a href="tel:+16693503341">669-350-3341</a></li>
+          <li><a href="https://www.hbkfutsal.com">www.hbkfutsal.com</a></li>
+          <li><a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">Instagram — @hbkfutbol</a></li>
+          <li><a href="#sponsor">Sponsor HBK</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 HBK Futsal · Humble Ballers Klub. All rights reserved.</div>
+  </footer>
+
+  <!-- ========================== JS ========================== -->
+  <script>
+    // Hero rotating slides
+    (function() {
+      const slides = document.querySelectorAll('.hero__slide');
+      const dots = document.querySelectorAll('.hero__dot');
+      if (slides.length < 2) return;
+      let current = 0;
+      let timer;
+
+      function show(i) {
+        slides.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
+        dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
+        current = i;
+      }
+      function next() { show((current + 1) % slides.length); }
+
+      function start() { timer = setInterval(next, 2500); }
+      function stop() { clearInterval(timer); }
+
+      dots.forEach((d, i) => d.addEventListener('click', () => { stop(); show(i); start(); }));
+      start();
+    })();
+
+    // Mobile nav toggle
+    (function() {
+      const toggle = document.querySelector('.nav__toggle');
+      const menu = document.querySelector('.nav__menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+    })();
+
+    // Player search — live filter across both squads (roster rows + spotlight cards)
+    (function() {
+      const input = document.querySelector('.roster-search__input');
+      const empty = document.querySelector('.roster-search__empty');
+      const scope = document.getElementById('team');
+      if (!input || !scope) return;
+      const rows = scope.querySelectorAll('.women-squad__roster li, .player');
+      const groups = scope.querySelectorAll('.women-squad, .tier');
+      const dividers = scope.querySelectorAll('.squad-divider');
+      function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g, ''); }
+      input.addEventListener('input', () => {
+        const q = norm(input.value);
+        let visible = 0;
+        rows.forEach((row) => {
+          const match = !q || norm(row.textContent).includes(q);
+          row.classList.toggle('is-hidden', !match);
+          if (match) visible++;
+        });
+        groups.forEach((g) => {
+          const anyVisible = g.querySelector('li:not(.is-hidden), .player:not(.is-hidden)');
+          g.classList.toggle('is-hidden', !!q && !anyVisible);
+        });
+        dividers.forEach((d) => d.classList.toggle('is-hidden', !!q));
+        if (empty) empty.hidden = visible !== 0;
+      });
+    })();
+
+    // Sponsor marquee — clones the sponsor set until it's wider than its
+    // container, doubles it for the seamless -50% loop, then starts the
+    // right-to-left scroll. Reduced-motion users get a static centered row.
+    (function() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.querySelectorAll('.sponsor-marquee').forEach((mq) => {
+        const track = mq.querySelector('.sponsor-marquee__track');
+        const set = track && track.querySelector('.sponsor-marquee__set');
+        if (!track || !set) return;
+        let guard = 0;
+        while (track.scrollWidth < mq.clientWidth && guard++ < 24) {
+          track.appendChild(set.cloneNode(true));
+        }
+        track.innerHTML += track.innerHTML;
+        track.querySelectorAll('.sponsor-marquee__set').forEach((s, i) => {
+          s.setAttribute('aria-hidden', i === 0 ? 'false' : 'true');
+        });
+        mq.classList.add('is-running');
+      });
+    })();
+
+    // Scroll reveal — sections and cards fade/rise into view. Skipped for
+    // reduced-motion users; without JS everything is simply visible.
+    (function() {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll([
+        '.page-hero__eyebrow', '.page-hero__title', '.page-hero__lede',
+        '.section__eyebrow', '.section__title', '.section__lede',
+        '.nationals > *', '.welcome > *', '.women-squad', '.squad-divider',
+        '.player', '.coach-card', '.program', '.schedule__row', '.match-poster',
+        '.signing-card', '.ig-tile', '.sponsor > *', '.contact > *',
+        '.hub-card', '.portal-card', '.portal-client', '.roster-search', '.sponsor-marquee'
+      ].join(','));
+      if (!targets.length) return;
+      targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i % 4) * 70 + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.classList.add('is-revealed');
+          io.unobserve(el);
+          const done = () => { el.classList.remove('reveal'); el.style.transitionDelay = ''; };
+          el.addEventListener('transitionend', done, { once: true });
+          setTimeout(done, 1000);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "system": "web-engineering",
+  "version": "1.0.0",
+  "stateSchemaVersion": 1,
+  "compat": { "minWaterworld": "1.1.0" },
+  "profiles": {
+    "astro": { "version": "1.0.0" },
+    "nextjs": "planned"
+  },
+  "modules": {
+    "seo":           { "version": "1.0.0", "requires": ["core"] },
+    "performance":   { "version": "1.0.0", "requires": ["core"] },
+    "lighthouse":    { "version": "1.0.0", "requires": ["performance"] },
+    "accessibility": { "version": "1.0.0", "requires": ["core"] },
+    "security":      { "version": "1.0.0", "requires": ["core"] },
+    "deployment":    { "version": "1.0.0", "requires": ["core"] }
+  },
+  "tools": {
+    "python3": "*",
+    "node+npx:lighthouse": "optional - needed only for modules/lighthouse baselines"
+  },
+  "adapters": ["AGENTS.md", "CLAUDE.md", ".cursor/rules/web-quality.mdc"]
+}

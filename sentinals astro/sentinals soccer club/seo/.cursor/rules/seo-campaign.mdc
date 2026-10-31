@@ -1,0 +1,24 @@
+---
+description: SEO campaign rules — always applies
+alwaysApply: true
+---
+
+Before any work in this project, read `AGENTS.md` in this folder and follow it.
+Then read `seo-brief.md` for the plan and `progress.md` for what's already done.
+
+Two rules that override anything else:
+
+1. **Design rule — propose, discuss, apply only with approval.** Design and UX ideas
+   are welcome: present each idea with its reasoning and discuss it with the owner.
+   NEVER apply a visual change (restyle, re-layout, color/font/spacing, cosmetic CSS)
+   until the owner explicitly approves it. Invisible technical work — JSON-LD, meta
+   tags, semantic HTML, alt text, internal links, performance — may proceed freely.
+
+2. **Never invent facts about the business.** No schedules, prices, staff credentials,
+   founding dates, or customer counts from imagination. Ask the owner. A wrong claim
+   in copy or schema is worse than a missing one.
+
+The site source is the parent folder of this seo folder — read it before writing
+implementation code.
+
+Log every action to `progress.md` with the date and what changed.

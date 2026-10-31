@@ -1,0 +1,9 @@
+{ "profile": "nextjs", "version": "1.0.0", "entry": "PROFILE.md",
+  "rules": [
+    {"id": "NEXTJS-HYD-001", "title": "No browser APIs at module top level", "severity": "critical"},
+    {"id": "NEXTJS-HYD-002", "title": "Math.random/Date.now banned in render", "severity": "high"},
+    {"id": "NEXTJS-HYD-003", "title": "suppressHydrationWarning needs justification", "severity": "high"},
+    {"id": "NEXTJS-IMG-001", "title": "next/image discipline", "severity": "medium"}
+  ],
+  "docs": ["components-constants.md", "styling-performance-deploy.md"],
+  "source": "/mnt/d/001_websites/CODING_STANDARDS.md (§2-§9 curated; §10-11 stay template-local)" }

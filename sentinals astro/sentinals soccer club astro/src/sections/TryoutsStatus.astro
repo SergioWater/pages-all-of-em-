@@ -1,0 +1,35 @@
+---
+import { CONTACT } from "../consts";
+---
+
+<section id="tryouts-status" class="section">
+  <div class="section-inner">
+    <div class="about-cta cta-accent-blue">
+      <span class="status-badge status-badge--closed"
+        ><i class="fas fa-circle-check"></i> 2026 Tryouts Complete</span
+      >
+      <h2>Competitive Tryouts Are Closed — Rec League Is Open</h2>
+      <p>
+        Our May 2026 competitive tryout sessions have wrapped up and rosters are
+        set. <strong>Recreational registration is open now</strong> for the Fall
+        2026 season starting in August — no tryout required. Private training is
+        available year-round.
+      </p>
+      <p>
+        <a href={CONTACT.registrationUrl}
+          ><strong>Sign Up for Rec League</strong></a
+        >
+        &nbsp;|&nbsp;
+        <a href="/private-training"><strong>Private Training</strong></a>
+        &nbsp;|&nbsp;
+        <a href="/tryouts"><strong>2027 Tryout Info</strong></a>
+      </p>
+      <p style="margin-bottom: 0">
+        Questions? <a href="/contact"><strong>Get in touch</strong></a> or call
+        <a href={`tel:${CONTACT.phoneTel}`}
+          ><strong>{CONTACT.phoneDisplay}</strong></a
+        >.
+      </p>
+    </div>
+  </div>
+</section>

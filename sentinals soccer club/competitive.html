@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Competitive Soccer | Sentinels Soccer Club — Morgan Hill &amp; Gilroy</title>
+    <meta name="description" content="Year-round competitive soccer training for boys and girls ages 5-18. NorCal Premier league play, tournaments, and private training in Morgan Hill, Gilroy, and Hollister, CA." />
+    <link rel="canonical" href="https://sentinelssoccerclub.com/competitive.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Competitive Soccer | Sentinels Soccer Club — Morgan Hill &amp; Gilroy" />
+    <meta property="og:description" content="Year-round competitive soccer training for boys and girls ages 5-18. NorCal Premier league play, tournaments, and private training in Morgan Hill, Gilroy, and Hollister, CA." />
+    <meta property="og:url" content="https://sentinelssoccerclub.com/competitive.html" />
+    <meta property="og:image" content="https://sentinelssoccerclub.com/images/favicon_transparent.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:16px 0 6px;font-size:.85rem;line-height:1.5}
+      .footer-nav a{color:inherit;opacity:.82;text-decoration:none}
+      .footer-nav a:hover{opacity:1;text-decoration:underline}
+    </style>
+</head>
+
+<body>
+
+<!-- ========================================
+     TOP BAR
+     ======================================== -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="mailto:sentinelssoccerclub@gmail.com"><i class="fas fa-envelope"></i>
+                    sentinelssoccerclub@gmail.com</a>
+                <a href="tel:4087221028"><i class="fas fa-phone"></i> (408) 722-1028</a>
+            </div>
+            <div class="topbar-center">
+                <a href="index.html"><img src="./images/favicon_transparent.png" alt="Sentinels Soccer Club Logo" /></a>
+            </div>
+            <div class="topbar-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sentinelssoccerclub/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sentinels.soccer.club" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@SentinelsSoccerClub/featured" target="_blank"
+                        rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <a href="https://sportscampament.web.app/#" class="btn-login">Login / Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-inner">
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="
+                        document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i> MENU
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Homepage</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="has-dropdown">
+                    <a href="#" class="nav-link active" aria-haspopup="true">Programs <span class="caret">▼</span></a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="competitive.html" aria-current="page">Competitive</a>
+                        <a href="recreational.html">Rec League</a>
+                        <a href="private-training.html">Private Training</a>
+                        <a href="summer-camps.html">Summer Camps</a>
+                    </div>
+                </div>
+                <a href="coaches.html" class="nav-link">Coaches</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="tryouts.html" class="nav-link">Tryouts</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div></div>
+    </nav>
+
+    <!-- ========================================
+     SITE-WIDE PROMO BANNER (Rec registration)
+     Remove this block from each page when the promo ends.
+     ======================================== -->
+    <div class="promo-banner" id="promo-banner" hidden>
+        <div class="promo-banner-inner">
+            <span class="promo-banner-text">
+                <i class="fas fa-bullhorn"></i>
+                <strong>Rec League registration is open</strong> — Fall 2026 season starts in August.
+            </span>
+            <a href="https://sportscampament.web.app/#" class="promo-banner-cta">Sign Up</a>
+            <button class="promo-banner-close" id="promo-banner-close" aria-label="Dismiss announcement">&times;</button>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var b = document.getElementById('promo-banner');
+            if (!b) return;
+            try { if (localStorage.getItem('recPromoDismissed') === '1') return; } catch (e) { }
+            b.hidden = false;
+            document.getElementById('promo-banner-close').addEventListener('click', function () {
+                b.hidden = true;
+                try { localStorage.setItem('recPromoDismissed', '1'); } catch (e) { }
+            });
+        })();
+    </script>
+
+
+    <h1 class="vh">Sentinels Soccer Club Competitive Soccer Program</h1>
+
+<section id="competitive" class="section">
+        <div class="section-inner">
+            <h2><span class="accent">Competitive</span> Program</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Year-round training for boys and girls, ages 5 to 18.
+                Structured practices, league play, and tournaments.
+            </p>
+
+            <p>
+                Our competitive program builds complete players. Athletes
+                develop technical, tactical, physical, and mental skills
+                through structured training and high-level match play. Teams
+                compete in NorCal Premier Soccer leagues and select
+                tournaments throughout the year.
+            </p>
+
+            <a href="https://norcalpremier.com/club/13079/" target="_blank" rel="noopener noreferrer"
+                class="btn-primary">
+                <i class="fas fa-shield-halved"></i> View Our NorCal Premier
+                Club Page
+                <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75em; margin-left: 4px"></i>
+            </a>
+
+            <h3>Skills We Develop</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-futbol" style="color: var(--green); margin-right: 6px"></i>
+                    Dribbling
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-arrows-alt" style="color: var(--green); margin-right: 6px"></i>
+                    Passing
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-bullseye" style="color: var(--green); margin-right: 6px"></i>
+                    Shooting
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-hand-paper" style="color: var(--green); margin-right: 6px"></i>
+                    Control
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain" style="color: var(--green); margin-right: 6px"></i>
+                    Heading
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-hands" style="color: var(--green); margin-right: 6px"></i>
+                    Goalkeeping
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt" style="color: var(--green); margin-right: 6px"></i>
+                    Defending
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chess" style="color: var(--green); margin-right: 6px"></i>
+                    Game Awareness
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users" style="color: var(--green); margin-right: 6px"></i>
+                    Teamwork
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-heartbeat" style="color: var(--green); margin-right: 6px"></i>
+                    Fitness
+                </div>
+            </div>
+
+            <div class="comp-images">
+                <img src="./images/stock-passing-drill-stadium.jpg" alt="Passing drills" loading="lazy" />
+                <img src="./images/stock-shooting-on-goal.jpg" alt="Shooting practice" loading="lazy" />
+                <img src="./images/training-cone-drill-three-players.jpg" alt="Sentinels players training" loading="lazy" />
+            </div>
+
+            <div class="comp-split">
+                <div class="comp-card">
+                    <h3><i class="fas fa-mars"></i> Boys' Competitive</h3>
+                    <p>
+                        Teams from U6 through U19. Year-round training with
+                        fall and spring league seasons, plus tournament
+                        opportunities. Players develop in a competitive
+                        environment designed to challenge and improve every
+                        aspect of their game.
+                    </p>
+                    <p>
+                        Multiple training sessions per week with experienced
+                        coaching staff. Age-appropriate development pathways
+                        ensure players advance at the right pace.
+                    </p>
+                </div>
+                <div class="comp-card">
+                    <h3><i class="fas fa-venus"></i> Girls' Competitive</h3>
+                    <p>
+                        Full competitive pathway for female athletes, U6
+                        through U19. Same high-quality coaching and training
+                        structure as our boys' program. Girls compete in
+                        NorCal Premier Soccer leagues and regional
+                        tournaments.
+                    </p>
+                    <p>
+                        We are committed to growing girls' soccer in South
+                        County and providing every female player with a
+                        pathway to excel.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Proven Winners: boys + girls championship results -->
+            <h3 style="margin-top: 40px">
+                <i class="fas fa-trophy" style="color: var(--gold); margin-right: 6px"></i>
+                Proven Winners
+            </h3>
+            <div class="section-divider section-divider--purple"></div>
+            <p style="max-width: 760px">
+                Our competitive teams don't just train — they win. Sentinels squads have earned
+                <strong>State Cup titles</strong>, <strong>NorCal Premier podium finishes</strong>,
+                <strong>Best of the Best honors</strong>, and futsal championships across both our
+                boys' and girls' programs.
+            </p>
+            <div class="gallery-grid">
+                <img src="./images/team-girls-state-cup-champions.jpg"
+                    alt="Sentinels girls competitive team named State Cup Champions at PayPal Park stadium"
+                    loading="lazy" />
+                <img src="./images/team-teen-boys-best-of-the-best.jpg"
+                    alt="Sentinels teen boys competitive team named Best of the Best with tournament medals"
+                    loading="lazy" />
+                <img src="./images/team-girls-norcal-podium-trophy.jpg"
+                    alt="Sentinels girls competitive team on the NorCal Premier winners podium with the championship trophy"
+                    loading="lazy" />
+                <img src="./images/team-boys-three-trophies.jpg"
+                    alt="Sentinels boys competitive team posing with three championship trophies on the field"
+                    loading="lazy" />
+                <img src="./images/team-girls-norcal-premier-podium.jpg"
+                    alt="Sentinels girls competitive team lifting their trophy on the NorCal Premier Soccer championship stage"
+                    loading="lazy" />
+                <img src="./images/team-boys-futsal-champions.jpg"
+                    alt="Sentinels boys competitive futsal champions with trophy, medals, and coach indoors"
+                    loading="lazy" />
+            </div>
+
+            <div style="margin-top: 32px; padding: 24px; background: var(--gray-100); border-radius: 8px;">
+                <h3 style="margin-top: 0">
+                    <i class="fas fa-user-tie" style="color: var(--green)"></i>
+                    Private Training Available
+                </h3>
+                <p>
+                    Looking for one-on-one or small-group coaching outside team practice?
+                    Our <strong>Private Training</strong> program offers personalized sessions with
+                    Coach Rick, Coach Nolan, and Coach Alex — focused on individual skill development,
+                    position-specific work, and game preparation.
+                </p>
+                <a href="private-training.html" class="btn-primary">
+                    <i class="fas fa-arrow-right"></i> Learn More About Private Training
+                </a>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-inner">
+            <img src="./images/site-logo-1.png" alt="Sentinels Soccer Club" />
+            <nav class="footer-nav" aria-label="Site pages">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="competitive.html">Competitive</a>
+                <a href="recreational.html">Rec League</a>
+                <a href="private-training.html">Private Training</a>
+                <a href="summer-camps.html">Summer Camps</a>
+                <a href="coaches.html">Coaches</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="tryouts.html">Tryouts</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="copyright">
+                &copy; 2015–2026 Sentinels Soccer Club
+            </div>
+            <div class="credit">Web Design by @SergioAguilar</div>
+            <!-- <div class="pplx-link">
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity
+          Computer</a>
+      </div> -->
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile nav after clicking a link (skip dropdown parent)
+        document.querySelectorAll(".nav-links .nav-link").forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (!link.closest(".has-dropdown")) {
+                    document.querySelector(".nav-links").classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

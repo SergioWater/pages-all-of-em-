@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsor HBK Futsal — Partnership Opportunities | San Jose, CA</title>
+  <meta name="description" content="Partner with HBK Futsal. Sponsor a national-level futsal club in San Jose, gain community exposure, and help grow the sport. Current sponsor: Sali LLA." />
+  <link rel="canonical" href="https://www.hbkfutsal.com/sponsors.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sponsor HBK Futsal — Let's Partner &amp; Make History" />
+  <meta property="og:description" content="Gain valuable exposure while contributing to the growth of futsal in the Bay Area." />
+  <meta property="og:url" content="https://www.hbkfutsal.com/sponsors.html" />
+  <meta property="og:image" content="https://www.hbkfutsal.com/assets/logo.png" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="HBK Futsal home">
+        <img src="assets/logo.svg" alt="HBK Futsal logo" class="nav__logo" />
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">HBK Futsal</span>
+          <span class="nav__brand-sub">Humble Ballers Klub</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" class="nav__link" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="teams.html">Teams</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="coaches.html">Coaches</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="programs.html">Programs</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="schedule.html">Schedule</a></li>
+        <li role="none"><a role="menuitem" class="nav__link nav__link--active" href="sponsors.html">Sponsors</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="portal.html">Portal</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <p class="page-hero__eyebrow">Partnerships</p>
+    <h1 class="page-hero__title">Sponsor HBK</h1>
+    <p class="page-hero__lede">Let's partner &amp; make history.</p>
+  </section>
+
+  <section class="section section--navy">
+    <div class="section__inner">
+      <div class="sponsor">
+        <h2 class="sponsor__title">Want to Sponsor?</h2>
+        <p class="sponsor__tag">Your brand, on the national stage.</p>
+        <p class="sponsor__body">Join us in supporting HBK Futsal. By sponsoring our team, your company will gain valuable exposure while contributing to the growth of the sport in our community. Together, we can create exciting opportunities for local talent and foster a passion for futsal. Let's work together to make a difference.</p>
+        <p class="sponsor__body mt-32" style="font-size: 14px; opacity: 0.85;">Reach out: <a href="tel:+16693503341" style="color: var(--accent); border-bottom: 1px solid var(--accent);">669-350-3341</a> · <a href="https://www.hbkfutsal.com" style="color: var(--accent); border-bottom: 1px solid var(--accent);">www.hbkfutsal.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="section__inner">
+      <p class="section__eyebrow">Thank You</p>
+      <h2 class="section__title">Our Sponsors</h2>
+      <p class="section__lede">HBK Futsal is proudly sponsored by <strong>Sali LLA</strong> — supporting the club on the road to the 2026 U.S. Futsal National Championship in Las Vegas.</p>
+
+      <!-- SPONSOR MARQUEE — same ticker as the two on index.html.
+           Keep all three copies in sync. See README.md. -->
+      <div class="sponsor-marquee" aria-label="Our sponsors">
+        <div class="sponsor-marquee__track">
+          <ul class="sponsor-marquee__set">
+            <li class="sponsor-marquee__slot"><img class="sponsor-wall__img--blend" src="assets/sponsors/archxsuite.jpeg" alt="Archxsuite" /></li>
+            <li class="sponsor-marquee__slot"><span class="sponsor-wall__name">Sali LLA</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="center mt-48">
+        <a class="hero__cta" href="index.html#sponsor">Become a Sponsor</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">© 2026 HBK Futsal · Humble Ballers Klub · <a href="index.html">hbkfutsal.com</a> · <a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">@hbkfutbol</a></div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav__toggle');
+      const menu = document.querySelector('.nav__menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    })();
+
+    // Sponsor marquee — clones the sponsor set until it's wider than its
+    // container, doubles it for the seamless -50% loop, then starts the
+    // right-to-left scroll. Reduced-motion users get a static centered row.
+    (function() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.querySelectorAll('.sponsor-marquee').forEach((mq) => {
+        const track = mq.querySelector('.sponsor-marquee__track');
+        const set = track && track.querySelector('.sponsor-marquee__set');
+        if (!track || !set) return;
+        let guard = 0;
+        while (track.scrollWidth < mq.clientWidth && guard++ < 24) {
+          track.appendChild(set.cloneNode(true));
+        }
+        track.innerHTML += track.innerHTML;
+        track.querySelectorAll('.sponsor-marquee__set').forEach((s, i) => {
+          s.setAttribute('aria-hidden', i === 0 ? 'false' : 'true');
+        });
+        mq.classList.add('is-running');
+      });
+    })();
+
+    // Scroll reveal — sections and cards fade/rise into view. Skipped for
+    // reduced-motion users; without JS everything is simply visible.
+    (function() {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll([
+        '.page-hero__eyebrow', '.page-hero__title', '.page-hero__lede',
+        '.section__eyebrow', '.section__title', '.section__lede',
+        '.nationals > *', '.welcome > *', '.women-squad', '.squad-divider',
+        '.player', '.coach-card', '.program', '.schedule__row', '.match-poster',
+        '.signing-card', '.ig-tile', '.sponsor > *', '.contact > *',
+        '.hub-card', '.portal-card', '.portal-client', '.roster-search', '.sponsor-marquee'
+      ].join(','));
+      if (!targets.length) return;
+      targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i % 4) * 70 + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.classList.add('is-revealed');
+          io.unobserve(el);
+          const done = () => { el.classList.remove('reveal'); el.style.transitionDelay = ''; };
+          el.addEventListener('transitionend', done, { once: true });
+          setTimeout(done, 1000);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

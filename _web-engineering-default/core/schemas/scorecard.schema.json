@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Scorecard",
+  "type": "object",
+  "required": ["project", "generatedAt", "checks"],
+  "properties": {
+    "project": { "type": "string" },
+    "kitVersion": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "build": {
+      "type": "object",
+      "properties": {
+        "productionBuildPasses": { "type": ["boolean", "null"] },
+        "typecheckPasses": { "type": ["boolean", "null"] }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "critical": { "type": "integer" },
+        "high": { "type": "integer" },
+        "medium": { "type": "integer" },
+        "low": { "type": "integer" },
+        "info": { "type": "integer" }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "description": "free-form: jsBytesShipped, imagePayloadKb, routeCount, lighthouse categories...",
+      "additionalProperties": true
+    },
+    "regressions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "findings": { "type": "array", "items": { "$ref": "finding.schema.json" } }
+  }
+}

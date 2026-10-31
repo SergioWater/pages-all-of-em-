@@ -1,0 +1,46 @@
+---
+import { CONTACT, CLUB_VALUES } from "../consts";
+---
+
+<section id="homepage">
+  <div class="hero">
+    <div
+      class="hero-bg"
+      style={`background-image: url("/images/bg-stadium-ball-corner.jpg")`}
+    >
+    </div>
+    <div class="hero-content">
+      <img
+        src="/images/favicon_transparent.png"
+        alt="Sentinels Soccer Club Crest"
+        class="logo-large"
+      />
+      <h1>
+        Sentinels Soccer Club
+        <span class="hero-h1-sub">Soccer Club in Gilroy &amp; Morgan Hill</span>
+      </h1>
+      <div class="est">
+        Est. {CONTACT.foundingYear} &nbsp;•&nbsp; Morgan Hill, Gilroy &amp;
+        Hollister, California
+      </div>
+      <p>
+        Looking for a soccer club in Gilroy or Morgan Hill? Sentinels has trained
+        youth players across South County since 2015 — competitive teams,
+        recreational leagues, and summer camps for boys and girls ages 5 to 18.
+      </p>
+      <div class="hero-actions">
+        <a href="/#programs" class="hero-btn">Programs</a>
+        <a href="/tryouts" class="hero-btn hero-btn--primary">Tryouts</a>
+        <a href="/gallery" class="hero-btn">Gallery</a>
+        <a href="/about" class="hero-btn">About Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="values-strip">
+    <div class="values-strip-inner">
+      {CLUB_VALUES.map((v) => <span class="value-item">{v}</span>)}
+      {CLUB_VALUES.map((v) => <span class="value-item">{v}</span>)}
+    </div>
+  </div>
+</section>

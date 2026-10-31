@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy: #0F1F33;
+    --color-ivory: #F8F5F0;
+    --color-gold: #B8935A;
+    --color-charcoal: #1A1A1A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F8F5F0;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  ::selection {
+    background-color: #B8935A;
+    color: #F8F5F0;
+  }
+}
+
+@layer components {
+  .display-serif {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+
+  .eyebrow {
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .container-narrow {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-narrow {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2rem;
+    background-color: #B8935A;
+    color: #F8F5F0;
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 220ms ease, transform 220ms ease;
+    border: 1px solid #B8935A;
+  }
+
+  .btn-gold:hover {
+    background-color: #9E7B45;
+    border-color: #9E7B45;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2rem;
+    background-color: transparent;
+    color: #0F1F33;
+    border: 1px solid #0F1F33;
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 220ms ease;
+  }
+
+  .btn-outline:hover {
+    background-color: #0F1F33;
+    color: #F8F5F0;
+  }
+
+  .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2rem;
+    background-color: transparent;
+    color: #F8F5F0;
+    border: 1px solid rgba(248, 245, 240, 0.6);
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 220ms ease;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #F8F5F0;
+    color: #0F1F33;
+    border-color: #F8F5F0;
+  }
+
+  .gold-rule {
+    width: 3rem;
+    height: 1px;
+    background-color: #B8935A;
+    display: inline-block;
+  }
+
+  .input-field {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(15, 31, 51, 0.25);
+    padding: 0.85rem 0.25rem;
+    color: #0F1F33;
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 200ms ease;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-bottom-color: #B8935A;
+  }
+
+  .input-field::placeholder {
+    color: rgba(15, 31, 51, 0.45);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

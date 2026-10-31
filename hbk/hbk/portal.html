@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal — Lush Essences</title>
+  <meta name="description" content="Lush Essences client portal — browse the HBK Futsal build page by page." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================== PORTAL NAV ========================== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="portal.html" class="nav__brand" aria-label="Lush Essences client portal">
+        <span class="portal-mark" aria-hidden="true">LE</span>
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">Lush Essences</span>
+          <span class="nav__brand-sub">Client Portal</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" role="menubar">
+        <!-- Flow: lushessences.com (client list, one level up) → portal.html (this page) → index.html (live site).
+             ../index.html is the agency lobby — on the agency host this resolves to lushessences.com/index.html -->
+        <li role="none"><a role="menuitem" class="nav__link" href="../index.html">&larr; All Clients</a></li>
+        <li role="none"><a role="menuitem" class="nav__link nav__link--active" href="portal.html">Portal</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="index.html">HBK Futsal Site</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========================== HERO ========================== -->
+  <section class="page-hero">
+    <p class="page-hero__eyebrow">Lush Essences</p>
+    <h1 class="page-hero__title">Client Portal</h1>
+    <p class="page-hero__lede">Everything we've built for HBK Futsal, page by page. Click any card to open it.</p>
+  </section>
+
+  <!-- ========================== CLIENT: HBK FUTSAL ========================== -->
+  <section class="section section--cream">
+    <div class="section__inner">
+
+      <div class="portal-client">
+        <img class="portal-client__logo" src="assets/logo.png" alt="HBK Futsal logo" />
+        <div>
+          <p class="portal-client__label">Active Client</p>
+          <h2 class="portal-client__name">HBK Futsal</h2>
+          <p class="portal-client__meta">Humble Ballers Klub · San Jose, CA · 7 pages live</p>
+        </div>
+        <a class="portal-cta portal-client__cta" href="index.html">Open Live Site</a>
+      </div>
+
+      <div class="portal-grid">
+
+        <a class="portal-card" href="index.html">
+          <span class="portal-card__num">01</span>
+          <h3 class="portal-card__title">Home</h3>
+          <p class="portal-card__desc">The main landing page — hero, Nationals feature, both squads, new signings, Instagram wall, and contact.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="teams.html">
+          <span class="portal-card__num">02</span>
+          <h3 class="portal-card__title">Teams &amp; Rosters</h3>
+          <p class="portal-card__desc">Full men's and women's NFPL rosters for 2025–2026, with the new signings flagged.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="schedule.html">
+          <span class="portal-card__num">03</span>
+          <h3 class="portal-card__title">Schedule</h3>
+          <p class="portal-card__desc">Season fixtures plus the men's, women's, and U19 match schedules for Nationals in Las Vegas.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="coaches.html">
+          <span class="portal-card__num">04</span>
+          <h3 class="portal-card__title">Coaches &amp; Staff</h3>
+          <p class="portal-card__desc">All seven staff profiles, including Víctor Miramontes as Technical Director.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="programs.html">
+          <span class="portal-card__num">05</span>
+          <h3 class="portal-card__title">Programs</h3>
+          <p class="portal-card__desc">Skills training, the youth development pathway, and the elite NFPL squads.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="sponsors.html">
+          <span class="portal-card__num">06</span>
+          <h3 class="portal-card__title">Sponsors</h3>
+          <p class="portal-card__desc">The partnership pitch and current sponsor recognition.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="book-online.html">
+          <span class="portal-card__num">07</span>
+          <h3 class="portal-card__title">Book Training</h3>
+          <p class="portal-card__desc">Booking and contact page for sessions, tryouts, and partnership enquiries.</p>
+          <span class="portal-card__go">Open page →</span>
+        </a>
+
+        <a class="portal-card" href="sitemap.xml">
+          <span class="portal-card__num">08</span>
+          <h3 class="portal-card__title">Sitemap</h3>
+          <p class="portal-card__desc">The XML sitemap submitted to Google — all 7 public URLs with image entries. (This portal is deliberately excluded and noindexed.)</p>
+          <span class="portal-card__go">View file →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== LUSH ESSENCES ========================== -->
+  <section class="section section--navy">
+    <div class="section__inner">
+      <div class="sponsor">
+        <p class="section__eyebrow" style="color: var(--accent);">The Studio</p>
+        <h2 class="sponsor__title">Lush Essences</h2>
+        <p class="sponsor__tag">Visual identity &amp; web for teams and brands.</p>
+        <p class="sponsor__body">Lush Essences builds the visual side of HBK Futsal — the graphics, the site, and the story. This portal is where the work lives while it's in progress.</p>
+        <!-- Lush Essences lobby — one level up (../index.html is the agency client list) -->
+        <p class="center mt-32">
+          <a class="hero__cta" href="../index.html">Visit Lush Essences</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== FOOTER ========================== -->
+  <footer class="footer">
+    <div class="footer__bottom">
+      Lush Essences · Client Portal · <a href="index.html">HBK Futsal</a>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav__toggle');
+      const menu = document.querySelector('.nav__menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+    })();
+
+    // Scroll reveal — sections and cards fade/rise into view. Skipped for
+    // reduced-motion users; without JS everything is simply visible.
+    (function() {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll([
+        '.page-hero__eyebrow', '.page-hero__title', '.page-hero__lede',
+        '.section__eyebrow', '.section__title', '.section__lede',
+        '.nationals > *', '.welcome > *', '.women-squad', '.squad-divider',
+        '.player', '.coach-card', '.program', '.schedule__row', '.match-poster',
+        '.signing-card', '.ig-tile', '.sponsor > *', '.contact > *',
+        '.hub-card', '.portal-card', '.portal-client', '.roster-search', '.sponsor-wall > *'
+      ].join(','));
+      if (!targets.length) return;
+      targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i % 4) * 70 + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.classList.add('is-revealed');
+          io.unobserve(el);
+          const done = () => { el.classList.remove('reveal'); el.style.transitionDelay = ''; };
+          el.addEventListener('transitionend', done, { once: true });
+          setTimeout(done, 1000);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

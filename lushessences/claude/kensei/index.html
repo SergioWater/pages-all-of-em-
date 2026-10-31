@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kensei Judo | Judo San Jose</title>
+  <meta name="description" content="Kensei Judo in San Jose, California. Judo training for all ages and skill levels. Start your Judo journey today.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.2/dist/css/glide.core.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-bar py-1 bg-red-dark d-none d-sm-flex">
+    <div class="container-xl small text-white font-bold">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex gap-3">4075 Evergreen Village Square, Suite 100-110, San Jose, CA 95135</div>
+        <div class="d-flex align-items-center gap-2">
+          <svg class="mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" aria-hidden="true"><path d="M384 32c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H384zm-90.7 96.7c-9.7-2.6-19.9 2.3-23.7 11.6l-20 48c-3.4 8.2-1 17.6 5.8 23.2L280 231.7c-16.6 35.2-45.1 63.7-80.3 80.3l-20.2-24.7c-5.6-6.8-15-9.2-23.2-5.8l-48 20c-9.3 3.9-14.2 14-11.6 23.7l12 44C111.1 378 119 384 128 384c123.7 0 224-100.3 224-224c0-9-6-16.9-14.7-19.3l-44-12z"/></svg>
+          <strong>(408) 429-9555</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar-header">
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-xl">
+        <a class="navbar-brand p-0" href="index.html">
+          <img src="assets/logo%20transparent%20horizontal.png" alt="Kensei Judo Academy logo">
+          <div class="visually-hidden">Kensei Judo</div>
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+            <li class="nav-item"><a href="instructors.html" class="nav-link">Instructors</a></li>
+            <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="right d-flex align-items-center gap-2">
+          <a class="btn btn-outline-red-dark fw-semibold d-none d-sm-flex align-items-center gap-2" href="yoga.html">
+            <span class="yoga-icon-wrapper"><img src="assets/img/yoga-logo.svg" width="40" height="40" alt=""></span>
+            Yoga
+          </a>
+          <button class="btn btn-red-dark fw-semibold d-none d-sm-flex" data-bs-toggle="modal" data-bs-target="#request-information">Request information</button>
+          <button id="btn-menu-open" class="hamburger collapsed hamburger--elastic" aria-expanded="false" type="button">
+            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            <span class="visually-hidden">Menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="main-d-nav" id="menu" aria-label="Mobile">
+    <ul class="list-unstyled">
+      <li class="nav-item display-5 py-2"><a href="index.html" class="nav-link text-body text-decoration-none font-extrabold"><span class="underline-active">Home</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="programs.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Programs</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="yoga.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Yoga</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="instructors.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Instructors</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="schedule.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Schedule</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="blog.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Blog</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="about.html" class="nav-link text-body text-decoration-none font-extrabold"><span>About</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="policy-etiquette.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Policy &amp; Etiquette</span></a></li>
+      <li class="nav-item display-5 py-2"><a href="contact.html" class="nav-link text-body text-decoration-none font-extrabold"><span>Contact</span></a></li>
+    </ul>
+    <button id="btn-menu-close" class="hamburger hamburger--elastic" type="button">
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      <span class="visually-hidden">Close menu</span>
+    </button>
+  </nav>
+  <span id="menu-open-overlay"></span>
+
+  <main>
+    <!-- ============ HERO with sword animation ============ -->
+    <section class="hero gradient-2 bg-body-tertiary position-relative d-flex align-items-center">
+      <video poster="assets/video/poster.jpg" class="hero-video" autoplay playsinline preload="auto" loop muted>
+        <source src="assets/video/output.mp4" type="video/mp4">
+      </video>
+      <div class="w-100 hero-content">
+        <div class="container-lg">
+          <div class="d-flex align-items-center flex-column">
+            <div class="sword-stage" aria-hidden="true">
+              <div class="sword sword-left">
+                <svg viewBox="0 0 560 64" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="bladeGradL" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#f7f9fc"/>
+                      <stop offset=".45" stop-color="#c9ced8"/>
+                      <stop offset="1" stop-color="#eef1f5"/>
+                    </linearGradient>
+                    <linearGradient id="goldGradL" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#e8c65a"/>
+                      <stop offset="1" stop-color="#a07c1e"/>
+                    </linearGradient>
+                    <pattern id="tsukaWrapL" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                      <rect x="5" y="5" width="4.5" height="4.5" fill="#e6e9ef"/>
+                    </pattern>
+                  </defs>
+                  <rect x="10" y="20" width="8" height="24" rx="3" fill="url(#goldGradL)"/>
+                  <rect x="16" y="20" width="114" height="24" rx="8" fill="#141c2e"/>
+                  <rect x="16" y="20" width="114" height="24" rx="8" fill="url(#tsukaWrapL)" opacity=".85"/>
+                  <rect x="16" y="20" width="114" height="24" rx="8" fill="none" stroke="#0a0f1c" stroke-width="2"/>
+                  <rect x="130" y="13" width="14" height="38" rx="4" fill="url(#goldGradL)" stroke="#7a5c12" stroke-width="1"/>
+                  <rect x="144" y="23" width="10" height="18" fill="#b87333"/>
+                  <path d="M154 24 C 300 16, 460 10, 556 6 L 540 30 C 470 40, 300 44, 154 38 Z" fill="url(#bladeGradL)" stroke="#9aa1ad" stroke-width="1"/>
+                  <path d="M165 31 C 290 26, 420 20, 528 13" fill="none" stroke="#ffffff" stroke-width="1.6" opacity=".75"/>
+                </svg>
+              </div>
+              <div class="sword sword-right">
+                <svg viewBox="0 0 560 64" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="bladeGradR" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#f7f9fc"/>
+                      <stop offset=".45" stop-color="#c9ced8"/>
+                      <stop offset="1" stop-color="#eef1f5"/>
+                    </linearGradient>
+                    <linearGradient id="goldGradR" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#e8c65a"/>
+                      <stop offset="1" stop-color="#a07c1e"/>
+                    </linearGradient>
+                    <pattern id="tsukaWrapR" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                      <rect x="5" y="5" width="4.5" height="4.5" fill="#e6e9ef"/>
+                    </pattern>
+                  </defs>
+                  <rect x="10" y="20" width="8" height="24" rx="3" fill="url(#goldGradR)"/>
+                  <rect x="16" y="20" width="114" height="24" rx="8" fill="#141c2e"/>
+                  <rect x="16" y="20" width="114" height="24" rx="8" fill="url(#tsukaWrapR)" opacity=".85"/>
+                  <rect x="16" y="20" width="114" height="24" rx="8" fill="none" stroke="#0a0f1c" stroke-width="2"/>
+                  <rect x="130" y="13" width="14" height="38" rx="4" fill="url(#goldGradR)" stroke="#7a5c12" stroke-width="1"/>
+                  <rect x="144" y="23" width="10" height="18" fill="#b87333"/>
+                  <path d="M154 24 C 300 16, 460 10, 556 6 L 540 30 C 470 40, 300 44, 154 38 Z" fill="url(#bladeGradR)" stroke="#9aa1ad" stroke-width="1"/>
+                  <path d="M165 31 C 290 26, 420 20, 528 13" fill="none" stroke="#ffffff" stroke-width="1.6" opacity=".75"/>
+                </svg>
+              </div>
+              <div class="sword-flash"></div>
+            </div>
+            <div class="text-center hero-text">
+              <h2>Kensei Judo</h2>
+              <h1 class="display-1" style="max-width: 705px">Start your Judo journey today</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-black text-center ticker-container">
+      <div class="py-2 text-white fw-bold ticker">Open now! All ages and skill levels welcome. For more details use the form, call or email. &#x1F447;</div>
+    </div>
+
+    <!-- ============ Programs ============ -->
+    <section class="programs py-5 bg-white" id="programs">
+      <div class="container-xl">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h2 class="display-5 fw-bold mb-2">Programs for every age</h2>
+            <p class="lead text-muted">Judo, yoga and private training in the Evergreen foothills of San Jose</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card program-card border rounded overflow-hidden matchheight bg-white h-100">
+              <img src="assets/img/hehe-min.jpg" class="card-img-top w-100" alt="Kensei Judo dojo training">
+              <div class="card-body d-flex flex-column pt-3 px-3 pb-3">
+                <h3 class="card-title h4">Judo Programs</h3>
+                <p class="card-text small">We run Judo classes every day for kids, teens and adults. Classes are age-based: Youth, Junior, and Adult. New students are placed by age, and coaches may recommend adjustments based on focus, safety, and readiness.</p>
+                <a href="programs.html" class="mt-auto link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Explore Judo programs</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card program-card border rounded overflow-hidden matchheight bg-white h-100">
+              <img src="assets/img/yoga_flyer.PNG" class="card-img-top w-100" alt="Yoga Class Flyer">
+              <div class="card-body d-flex flex-column pt-3 px-3 pb-3">
+                <h3 class="card-title h4">Yoga</h3>
+                <p class="card-text small">Hatha, Vinyasa, Restorative and Ashtanga — classes 7 days a week, 9:30am to 10:30am at the Kensei Judo dojo, before the martial arts classes later in the day.</p>
+                <a href="yoga.html" class="mt-auto link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Explore yoga classes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card program-card border rounded overflow-hidden matchheight bg-white h-100">
+              <img src="assets/img/gym-2.jpeg" class="card-img-top w-100" alt="Judo practice area">
+              <div class="card-body d-flex flex-column pt-3 px-3 pb-3">
+                <h3 class="card-title h4">Private Training</h3>
+                <p class="card-text small">Looking for one-on-one instruction? Please use our contact form to enquire about private training.</p>
+                <a href="contact.html" class="mt-auto link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Enquire now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card program-card border rounded overflow-hidden matchheight bg-white h-100">
+              <img src="assets/img/gym-1.jpeg" class="card-img-top w-100" alt="Kensei Judo facility">
+              <div class="card-body d-flex flex-column pt-3 px-3 pb-3">
+                <h3 class="card-title h4">Free Trial Week</h3>
+                <p class="card-text small">Trial includes 1 week of training (no-obligation) with uniform provided. Fill the form or call (408) 429-9555 for more info.</p>
+                <button type="button" class="mt-auto align-self-start link-red-dark link-offset-2 btn btn-link p-0 text-decoration-underline" data-bs-toggle="modal" data-bs-target="#request-information">Request information</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About + trial form ============ -->
+    <section class="columns py-4 bg-body-tertiary">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-0 order-1">
+            <h2 class="mb-3">Judo training in San Jose, California</h2>
+            <p>
+              <span class="font-semibold text-red-800">Kensei Judo</span> is located at 4075 Evergreen Village Square in the heart of the Evergreen foothills, in an immaculate <strong>4,500 sq ft facility</strong>, with a large 2,000 sq ft Judo practice area. Our Judo mats are <strong>top of the line, spring supported flooring systems.</strong> The Dojo also includes a recuperation and rehabilitation area, two changing rooms with showers, and even a <strong>children&#39;s area</strong>. <a href="about.html" class="link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Read more about us</a>
+            </p>
+            <div class="pt-3">
+              <div class="glide-fade">
+                <div data-glide-el="track" class="glide__track rounded">
+                  <ul class="glide__slides">
+                    <li class="glide__slide"><img src="assets/img/hehe-min.jpg" alt="Kensei Judo dojo training"></li>
+                    <li class="glide__slide"><img src="assets/img/gym-1.jpeg" alt="Kensei Judo facility"></li>
+                    <li class="glide__slide"><img src="assets/img/gym-2.jpeg" alt="Judo practice area"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="offset-lg-1 col-lg-5 order-lg-1 order-0 mb-4 mb-lg-0">
+            <div class="mb-1">
+              <h3 class="mb-2">Request information or book a trial</h3>
+              <p>
+                <small>Trial includes 1 week of training (no-obligation) with uniform provided.</small>
+                <small>Fill the form or <strong>call (408) 429-9555</strong> for more info.</small><br>
+                <a href="schedule.html" class="small link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Click here to see our schedule</a>
+              </p>
+              <div class="bg-white p-3 rounded shadow">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-12">
+                    <label for="home-name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="home-name" name="your-name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="home-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="home-email" name="your-email" required>
+                    <div class="invalid-feedback">Please enter your email.</div>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="home-phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="home-phone" name="phone">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="home-comments" class="form-label">Comments / questions</label>
+                    <textarea class="form-control" id="home-comments" name="comments"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid mt-2">
+                      <button type="submit" class="btn-submit btn btn-red-dark text-white w-100">
+                        <span class="submit-text">Submit</span>
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span role="status">Submitting...</span>
+                      </button>
+                      <span class="form-text mt-2">
+                        <p>By submitting this form, I consent to being contacted at the details provided</p>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Testimonials ============ -->
+    <section class="testimonials py-5 bg-white">
+      <div class="container-xl">
+        <div class="title-row row align-items-center">
+          <div class="col"><h2>Testimonials</h2></div>
+        </div>
+        <div class="py-3">
+          <div class="glide testimonials" id="carousel-testimonials">
+            <div data-glide-el="track" class="glide__track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="card overflow-hidden">
+                    <div class="d-flex flex-column card-body p-3 bg-white rounded text-body matchheight">
+                      <div class="fs-5 fw-light">
+                        <p>Overall, the experience has been very positive for both me and my child. The staff is friendly and very capable. The Senseis are disciplined and respected.</p>
+                      </div>
+                      <div class="ms-auto mt-auto fw-bold">Parent 1</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card overflow-hidden">
+                    <div class="d-flex flex-column card-body p-3 bg-white rounded text-body matchheight">
+                      <div class="fs-5 fw-light">
+                        <p>My experience with this dojo has been thoroughly enjoyable. The Instructors take into consideration each child&#8217;s needs and learning styles. Their Kindness and patience is why I, as a parent, am grateful to this dojo. Thank each of you for making us a part of your community!</p>
+                      </div>
+                      <div class="ms-auto mt-auto fw-bold">Parent 2</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card overflow-hidden">
+                    <div class="d-flex flex-column card-body p-3 bg-white rounded text-body matchheight">
+                      <div class="fs-5 fw-light">
+                        <p>We are really happy that you joined the neighborhood. I feel a lot of inclusivity and &#8220;family&#8221; vibes from the senseis and staff members.</p>
+                      </div>
+                      <div class="ms-auto mt-auto fw-bold">Parent 3</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="glide-arrows d-flex gap-3 mt-3" data-glide-el="controls">
+              <div role="button" class="btn-arrow rounded-circle border d-flex align-items-center justify-content-center" style="width:50px;height:50px" data-glide-dir="&lt;" aria-label="Previous testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+              </div>
+              <div role="button" class="btn-arrow rounded-circle border d-flex align-items-center justify-content-center" style="width:50px;height:50px" data-glide-dir="&gt;" aria-label="Next testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Instructors preview ============ -->
+    <section class="columns py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row">
+          <div class="w-100"><h2 class="text-center mb-4 display-5">Our instructors</h2></div>
+        </div>
+        <div class="row">
+          <div class="offset-md-2 col-md-8 offset-lg-1 col-lg-10">
+            <div class="row gx-4">
+              <div class="col-lg-4 mb-lg-0 mb-4">
+                <div class="instructor-card" id="soren-ogden">
+                  <div class="card rounded shadow">
+                    <img src="assets/img/instructors/soren-ogden.jpg" alt="Soren OGDEN" class="rounded-top w-100">
+                    <div class="p-3">
+                      <h4 class="card-title text-body">Soren OGDEN</h4>
+                      <div class="card-text">
+                        <div class="d-flex flex-column matchheight">
+                          <div>
+                            <p>Sensei OGDEN&#8217;s extensive resum&#233; includes gold at the National High School Championships, Washington State Championship, Collegiate National Championship, Youth National Championship, Junior Olympic National Championship as well as over 100 more medals totaling between judo, wresting, and Brazilian jujutsu. Originally from Washington state, he trained under Fred Ogden and Jason Harai, former President of the Northwest Judo Yudanshakai.</p>
+                          </div>
+                          <a href="instructors.html#soren-ogden" class="ms-auto mt-auto link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Read full bio</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-lg-0 mb-4">
+                <div class="instructor-card" id="yoshio-kurihara">
+                  <div class="card rounded shadow">
+                    <img src="assets/img/instructors/yoshio-kurihara.svg" alt="Yoshio KURIHARA" class="rounded-top w-100">
+                    <div class="p-3">
+                      <h4 class="card-title text-body">Yoshio KURIHARA</h4>
+                      <div class="card-text">
+                        <div class="d-flex flex-column matchheight">
+                          <div>
+                            <p>Yoshio KURIHARA Sensei began judo at the age of 5 in Milan, ITALY under the tutelage of his grandfather, Takero KURIHARA Sensei who was sent directly from the Kodokan to ITALY to spread the values and discipline of Judo. Takero Sensei was a direct disciple of Master Sensei, KOTANI, who was a direct disciple of [&#8230;]</p>
+                          </div>
+                          <a href="instructors.html#yoshio-kurihara" class="ms-auto mt-auto link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Read full bio</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="instructor-card" id="akrura-gordillo">
+                  <div class="card rounded shadow">
+                    <img src="assets/img/instructors/akrura-gordillo.svg" alt="Akrura GORDILLO" class="rounded-top w-100">
+                    <div class="p-3">
+                      <h4 class="card-title text-body">Akrura GORDILLO</h4>
+                      <p class="small text-red-dark fw-semibold mb-2">Teaches BJJ every other week</p>
+                      <div class="card-text">
+                        <div class="d-flex flex-column matchheight">
+                          <div>
+                            <p>Akrura GORDILLO Sensei brings a unique balance of technical expertise and martial arts mastery to the mat. He is a 2nd Degree Black Belt in Brazilian Jiu-Jitsu under Claudio Franca with 17 years of training experience [&#8230;]</p>
+                          </div>
+                          <a href="instructors.html#akrura-gordillo" class="ms-auto mt-auto link-red-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Read full bio</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-2 mb-3">
+      <div class="container">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kenseijudoofficial" data-unique-id="kenseijudoofficial" data-embed-from="embed_page" data-embed-type="creator">
+          <section><a target="_blank" rel="noopener" href="https://www.tiktok.com/@kenseijudoofficial?refer=creator_embed">@kenseijudoofficial</a></section>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- ============ News preview ============ -->
+    <section class="blog-preview py-5 bg-body-tertiary">
+      <div class="container-xl">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h2 class="display-5 fw-bold mb-2">Kensei news</h2>
+            <p class="lead text-muted">Stay updated with the latest from the dojo</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card border rounded overflow-hidden matchheight bg-white">
+              <a class="text-decoration-none text-body" href="blog/january-session-1-5-2-1-updates.html">
+                <img src="assets/img/blog/IMG_0288.jpg" class="card-img-top w-100" alt="January Session (1/5-2/1) Updates" style="height: 200px; object-fit: cover;">
+                <div class="card-body pt-3 px-3 pb-1">
+                  <h4 class="card-title h4 text-decoration-none text-body">January Session (1/5-2/1) Updates</h4>
+                  <div class="text-muted small mb-2"><time datetime="2026-01-04">Jan 4, 2026</time> &#8226; <span>By Soren Ogden</span></div>
+                  <div class="card-text small"><p>Updated information for the Kensei Judo new year</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card border rounded overflow-hidden matchheight bg-white">
+              <a class="text-decoration-none text-body" href="blog/famous-judo-practitioners.html">
+                <img src="assets/img/blog/john_wick.jpg" class="card-img-top w-100" alt="Famous Judo practitioners" style="height: 200px; object-fit: cover;">
+                <div class="card-body pt-3 px-3 pb-1">
+                  <h4 class="card-title h4 text-decoration-none text-body">Famous Judo practitioners</h4>
+                  <div class="text-muted small mb-2"><time datetime="2025-08-01">Aug 1, 2025</time> &#8226; <span>By Kensei Judo</span></div>
+                  <div class="card-text small"><p>Far from a comprehensive list, some of the most notable names who have studied and incorporated Judo into their lives for various reasons and benefits.&#160;</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <a class="btn btn-sm btn-red-dark rounded-0 fw-medium text-white fs-6 px-2 py-2 align-items-center" href="blog.html">View All Posts
+              <svg style="position:relative;top:-1px;margin-left:8px" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Community gallery ============ -->
+    <section class="gallery pt-3 pb-2 text-center">
+      <div class="container-fluid">
+        <div class="row"><h2 class="mb-4">&#x1F94B; Our proud Judo community &#x1F4F7;</h2></div>
+        <div class="gallery">
+          <div id="gallery-grid" class="mx-auto">
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.24-AM-4.jpg"><img src="assets/img/gallery/wa-12.02.24-AM-4.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.24-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.24-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.24-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.24-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.24-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.24-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.26-AM.jpg"><img src="assets/img/gallery/wa-12.02.26-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.27-AM.jpg"><img src="assets/img/gallery/wa-12.02.27-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.27-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.27-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.28-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.28-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.28-AM.jpg"><img src="assets/img/gallery/wa-12.02.28-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.46-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.46-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.46-AM.jpg"><img src="assets/img/gallery/wa-12.02.46-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.46-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.46-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.47-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.47-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.47-AM.jpg"><img src="assets/img/gallery/wa-12.02.47-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.47-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.47-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.47-AM-4.jpg"><img src="assets/img/gallery/wa-12.02.47-AM-4.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.47-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.47-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.48-AM.jpg"><img src="assets/img/gallery/wa-12.02.48-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.48-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.48-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.48-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.48-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.48-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.48-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.49-AM.jpg"><img src="assets/img/gallery/wa-12.02.49-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.49-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.49-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.49-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.49-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.50-AM.jpg"><img src="assets/img/gallery/wa-12.02.50-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.51-AM.jpg"><img src="assets/img/gallery/wa-12.02.51-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.50-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.50-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.51-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.51-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.51-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.51-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.51-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.51-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.52-AM.jpg"><img src="assets/img/gallery/wa-12.02.52-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.52-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.52-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.52-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.52-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.52-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.52-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.53-AM.jpg"><img src="assets/img/gallery/wa-12.02.53-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.53-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.53-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.53-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.53-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.53-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.53-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.54-AM.jpg"><img src="assets/img/gallery/wa-12.02.54-AM.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.54-AM-1.jpg"><img src="assets/img/gallery/wa-12.02.54-AM-1.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height2" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.54-AM-2.jpg"><img src="assets/img/gallery/wa-12.02.54-AM-2.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item grid-item--height3" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.54-AM-4.jpg"><img src="assets/img/gallery/wa-12.02.54-AM-4.jpg" alt="Kensei Judo community" loading="lazy"></a>
+            <a class="grid-item" data-fslightbox="gallery" href="assets/img/gallery/wa-12.02.54-AM-3.jpg"><img src="assets/img/gallery/wa-12.02.54-AM-3.jpg" alt="Kensei Judo community" loading="lazy"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq py-5 bg-body-tertiary">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <h2 class="mb-3 display-5">Frequently asked questions</h2>
+            <p>Our FAQ section addresses common inquiries about judo&#39;s safety, benefits for children, and the importance of qualified instruction. Learn how judo promotes physical fitness, mental discipline, ad social skills while emphasizing safe practices. Discover how our dojo&#39;s quality equipment and expert guidance create a secure environment for all practitioners.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="accordion" id="accordion-faq">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-0" aria-expanded="true" aria-controls="collapse-faq-0">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>01</small></div>
+                    Can parents stay, help, or coach during class?
+                  </button>
+                </h2>
+                <div id="collapse-faq-0" class="accordion-collapse collapse show" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Parents are welcome to observe and may provide brief non-instructional assistance when appropriate (such as tying a belt). Coaching, correcting, or interrupting instruction is not permitted. Instructors maintain full authority over class management and safety.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1" aria-expanded="false" aria-controls="collapse-faq-1">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>02</small></div>
+                    What if we miss a class?
+                  </button>
+                </h2>
+                <div id="collapse-faq-1" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Make-up classes are unlimited within the current billing cycle and must be used before the cycle ends. Make-ups do not roll over to future billing periods.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-2" aria-expanded="false" aria-controls="collapse-faq-2">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>03</small></div>
+                    What if my child arrives late or has to leave early?
+                  </button>
+                </h2>
+                <div id="collapse-faq-2" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Students may enter class at any time. We simply ask that they bow in to the instructor when stepping onto the mat so staff know they are present. If a student needs to leave early, they should also bow out.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3" aria-expanded="false" aria-controls="collapse-faq-3">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>04</small></div>
+                    What should my child wear to class?
+                  </button>
+                </h2>
+                <div id="collapse-faq-3" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Students should wear a clean, properly fitted judo gi with the belt tied correctly. If you do not have a gi yet, gi rentals are available. Shoes or sandals must be worn off the mat.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-4" aria-expanded="false" aria-controls="collapse-faq-4">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>05</small></div>
+                    How do I get promoted?
+                  </button>
+                </h2>
+                <div id="collapse-faq-4" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Promotions are by coach selection, not request. Students are selected based on consistent attendance, technical proficiency, focus, attitude, and readiness for added responsibility. Testing evaluates understanding and application, not memorization.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-5" aria-expanded="false" aria-controls="collapse-faq-5">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>06</small></div>
+                    Am I too old or not fit enough for judo?
+                  </button>
+                </h2>
+                <div id="collapse-faq-5" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>No. Judo is scalable to all ages and fitness levels. Classes emphasize safety, progression, and learning at your own pace. Many adults start with no prior athletic background.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-6" aria-expanded="false" aria-controls="collapse-faq-6">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>07</small></div>
+                    How do I pause my membership?
+                  </button>
+                </h2>
+                <div id="collapse-faq-6" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Memberships can be paused by submitting a pause request via email with advance notice. Pauses apply to full billing cycles and must be requested before the next billing date.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-7" aria-expanded="false" aria-controls="collapse-faq-7">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>08</small></div>
+                    Which class is right for my child?
+                  </button>
+                </h2>
+                <div id="collapse-faq-7" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Classes are age-based: Youth, Junior, and Adult. New students are placed by age, and coaches may recommend adjustments based on focus, safety, and readiness.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-8" aria-expanded="false" aria-controls="collapse-faq-8">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>09</small></div>
+                    Is Judo safe?
+                  </button>
+                </h2>
+                <div id="collapse-faq-8" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Judo is inherently safe due to its emphasis on controlled techniques and proper falling methods, which minimize injury risk. A well-structured dojo enhances safety through qualified instructors who teach correct techniques and emphasize respect and discipline. Good instruction ensures that students learn to fall safely, reducing the likelihood of accidents. Additionally, high-quality gym equipment, such as padded mats, provides a safe training environment, cushioning falls and impacts. Regular maintenance of equipment further ensures safety. Together, effective instruction and proper facilities create a secure atmosphere where students can confidently practice judo, making it a safe martial art for all ages.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-white border-0 d-flex gap-2 align-items-center focus-ring-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-9" aria-expanded="false" aria-controls="collapse-faq-9">
+                    <div class="h6 m-0 fw-light text-gray-200 faq-number"><small>010</small></div>
+                    How is Judo different from other martial arts?
+                  </button>
+                </h2>
+                <div id="collapse-faq-9" class="accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body"><p>Judo is a Japanese martial art focused on balance, leverage, and control rather than strikes. Training emphasizes throws, pins, and grappling, helping students develop coordination, confidence, discipline, and problem-solving skills in a safe, structured environment.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-red-dark text-white">
+      <iframe class="map-embed" title="Kensei Judo location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=4075%20Evergreen%20Village%20Square%2C%20Suite%20100-110%2C%20San%20Jose%2C%20CA%2095135&output=embed"></iframe>
+    </div>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="bg-black text-white pt-5 pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 mb-4">
+          <img src="assets/img/logo_white.png" width="100" class="mb-4" alt="Kensei Judo">
+          <div class="visually-hidden">Kensei Judo</div>
+          <div><small>Building community and confidence through the power of Judo.</small></div>
+        </div>
+        <div class="col-lg-3 offset-lg-1 mb-4">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="programs.html" class="text-white">Programs</a></li>
+            <li><a href="yoga.html" class="text-white">Yoga</a></li>
+            <li><a href="instructors.html" class="text-white">Instructors</a></li>
+            <li><a href="schedule.html" class="text-white">Schedule</a></li>
+            <li><a href="blog.html" class="text-white">Blog</a></li>
+            <li><a href="about.html" class="text-white">About</a></li>
+            <li><a href="policy-etiquette.html" class="text-white">Policy &amp; Etiquette</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <h5 class="mb-3">Follow Us</h5>
+          <div class="footer-icons d-flex flex-column gap-3 text-small">
+            <div class="footer-icon align-items-center d-flex gap-2">
+              <a href="https://www.instagram.com/kenseijudoofficial" class="d-flex align-items-center text-decoration-none gap-3" target="_blank" rel="noopener">
+                <img src="assets/img/svg/instagram-brands.svg" height="27" width="26" alt="">
+                <div class="text-white">Instagram</div>
+              </a>
+            </div>
+            <div class="footer-icon align-items-center d-flex gap-2">
+              <a href="https://www.facebook.com/people/Kensei-Judo-Official/61572444758245/" class="d-flex align-items-center text-decoration-none gap-3" target="_blank" rel="noopener">
+                <img src="assets/img/svg/facebook-f-brands.svg" height="25" width="25" alt="">
+                <div class="text-white">Facebook</div>
+              </a>
+            </div>
+            <div class="footer-icon align-items-center d-flex gap-2">
+              <a href="https://www.tiktok.com/@kenseijudoofficial" class="d-flex align-items-center text-decoration-none gap-3" target="_blank" rel="noopener">
+                <img src="assets/img/svg/tiktok-brands.svg" height="25" width="25" alt="">
+                <div class="text-white">TikTok</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="mb-3">Contact Us</h5>
+          <ul class="list-unstyled">
+            <li>Email: <a class="text-white" href="mailto:info@kenseijudo.com">info@kenseijudo.com</a></li>
+            <li>Phone: <a class="text-white" href="tel:+14084299555">(408) 429-9555</a></li>
+            <li class="mt-3">Address: 4075 Evergreen Village Square, Suite 100-110, San Jose, CA 95135</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col text-center"><p>&copy; 2026 Kensei Judo. All rights reserved.</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Request information modal ============ -->
+  <div class="modal fade" id="request-information" tabindex="-1" aria-labelledby="request-information-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="request-information-label">Request information</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="p-2">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-12">
+                <label for="modal-name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="modal-name" name="your-name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-6">
+                <label for="modal-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="modal-email" name="your-email" required>
+                <div class="invalid-feedback">Please enter your email.</div>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-6">
+                <label for="modal-phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="modal-phone" name="phone">
+              </div>
+              <div class="col-md-12">
+                <label for="modal-comments" class="form-label">Comments / questions</label>
+                <textarea class="form-control" id="modal-comments" name="comments"></textarea>
+              </div>
+              <div class="col-12">
+                <div class="d-grid mt-2">
+                  <button type="submit" class="btn-submit btn btn-red-dark text-white w-100">
+                    <span class="submit-text">Submit</span>
+                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    <span role="status">Submitting...</span>
+                  </button>
+                  <span class="form-text mt-2">
+                    <p>By submitting this form, I consent to being contacted at the details provided</p>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.2/dist/glide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fslightbox@3.4.1/index.js"></script>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var grid = document.getElementById("gallery-grid");
+      if (grid && typeof Masonry !== "undefined" && typeof imagesLoaded !== "undefined") {
+        imagesLoaded(grid, function () {
+          new Masonry(grid, {
+            itemSelector: ".grid-item",
+            originTop: true,
+            gutter: 10,
+            fitWidth: true,
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

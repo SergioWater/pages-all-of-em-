@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://other-host.example.com/sitemap-index.xml

@@ -1,0 +1,558 @@
+{
+  "profile": {
+    "name": "Sergio Aguilar",
+    "tagline": "My work spans shipped websites, a launched software application, and ongoing experiments in systems and AI. I build independently and collaborate with others to bring projects to life.",
+    "location": "San Jose, CA",
+    "github": "https://github.com/SergioWater",
+    "linkedin": "https://www.linkedin.com/in/sergiowater/",
+    "email": "sergiowater@gmail.com"
+  },
+  "categories": [
+    {
+      "id": "ai",
+      "label": "AI & Computer Vision",
+      "short": "AI / CV",
+      "blurb": "Machine learning, computer vision, and intelligent systems."
+    },
+    {
+      "id": "systems",
+      "label": "Systems & C",
+      "short": "Systems",
+      "blurb": "Low-level, multi-threaded, performance-focused programs."
+    },
+    {
+      "id": "trading",
+      "label": "Trading & Finance",
+      "short": "Trading",
+      "blurb": "Algorithmic trading, backtesting, and market tooling."
+    },
+    {
+      "id": "games",
+      "label": "Game Development",
+      "short": "Games",
+      "blurb": "Real-time multiplayer and Roblox game systems."
+    },
+    {
+      "id": "web",
+      "label": "Web Apps",
+      "short": "Web",
+      "blurb": "Full-stack and front-end web applications."
+    }
+  ],
+  "projects": [
+    {
+      "slug": "gold-trading-algorithm",
+      "title": "Gold Trading Algorithm",
+      "category": "trading",
+      "summary": "Backtested algorithmic trading system for gold futures with Monte Carlo simulation, prop-firm analysis, and live Telegram signals.",
+      "description": "A rules-based trading system for gold futures (GC), with backtesting, Monte Carlo equity-curve simulations, and checks against prop-firm drawdown and daily-loss rules. A Telegram bot delivers trade signals for monitoring.",
+      "tags": [
+        "Python",
+        "Algorithmic Trading",
+        "Monte Carlo",
+        "Telegram API",
+        "Financial Engineering"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/Algo",
+      "highlights": [
+        "Monte Carlo stress-testing of the equity curve",
+        "Prop-firm rule and drawdown analysis",
+        "Live Telegram trade signal delivery"
+      ]
+    },
+    {
+      "slug": "crypto-price",
+      "title": "Crypto Price Tracker",
+      "category": "trading",
+      "summary": "Real-time cryptocurrency tracker with interactive charts and portfolio tracking via CoinGecko API.",
+      "description": "A real-time cryptocurrency price tracker with interactive Chart.js graphs and basic portfolio tracking, powered by the CoinGecko API.",
+      "tags": [
+        "JavaScript",
+        "Chart.js",
+        "CoinGecko API",
+        "Finance"
+      ],
+      "github": "https://github.com/SergioWater/cryptoPrice",
+      "highlights": [
+        "Live prices via CoinGecko API",
+        "Interactive Chart.js charts",
+        "Portfolio tracking"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "triton-fused-softmax",
+      "title": "Triton Fused Softmax Kernel",
+      "category": "ai",
+      "summary": "Fused softmax GPU kernel in Triton — cuts DRAM traffic ~4× vs naive PyTorch by keeping all ops in on-chip SRAM.",
+      "description": "A custom fused softmax GPU kernel written in OpenAI's Triton. The kernel performs the max, exponentiation, and normalization passes entirely in on-chip SRAM, cutting DRAM traffic by roughly 4× compared to a naive PyTorch implementation. Autotuned across 11 matrix shapes via Triton's autotune over num_warps, num_stages, and BLOCK_SIZE to balance occupancy and memory throughput, and profiled on a T4 GPU with Nsight Compute to analyze occupancy, memory bandwidth utilization, and warp-stall reasons.",
+      "tags": [
+        "Python",
+        "Triton",
+        "PyTorch",
+        "CUDA",
+        "Nsight Compute",
+        "GPU"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/triton-fused-softmax",
+      "highlights": [
+        "~4× lower DRAM traffic vs naive PyTorch softmax",
+        "Autotuned across 11 matrix shapes (num_warps / num_stages / BLOCK_SIZE)",
+        "Profiled on T4 GPU with Nsight Compute for occupancy and warp-stall analysis"
+      ]
+    },
+    {
+      "slug": "llm-inference-optimization",
+      "title": "LLM Inference Optimization (vLLM + AWQ + Speculative Decoding)",
+      "category": "ai",
+      "summary": "Llama 3.2 deployed on vLLM with AWQ 4-bit quantization, speculative decoding, and FP8 KV-cache benchmarking on an RTX 3070 Ti.",
+      "description": "End-to-end LLM inference optimization stack. Deployed Llama 3.2 3B on vLLM with AWQ 4-bit weight quantization to double the available context length on 8 GB VRAM. Implemented speculative decoding with a 1B draft model to reduce token generation latency while preserving output quality. Benchmarked TTFT and TPOT across KV-cache configurations using FP8 compression and PagedAttention on an RTX 3070 Ti.",
+      "tags": [
+        "Python",
+        "vLLM",
+        "AWQ",
+        "Llama 3.2",
+        "CUDA",
+        "PagedAttention"
+      ],
+      "visibility": "private",
+      "github": "",
+      "highlights": [
+        "AWQ 4-bit quantization doubled context length on 8 GB VRAM",
+        "Speculative decoding with 1B draft model reduced token latency",
+        "TTFT / TPOT benchmarked with FP8 KV-cache + PagedAttention on RTX 3070 Ti"
+      ]
+    },
+    {
+      "slug": "av-telemetry-pipeline",
+      "title": "Autonomous Vehicle Telemetry Pipeline",
+      "category": "systems",
+      "summary": "Real-time AV telemetry ingestion pipeline using Redpanda, Docker Compose, and MinIO for Kafka-compatible streaming and object storage.",
+      "description": "A real-time telemetry ingestion pipeline for autonomous-vehicle sensor data. Uses Redpanda to stream telemetry with Kafka-compatible producers and consumers, with the entire stack containerized via Docker Compose — Redpanda, MinIO, and Python services orchestrated as reproducible, isolated services. Raw telemetry is stored in MinIO object storage for structured retrieval of vehicle sensor logs.",
+      "tags": [
+        "Python",
+        "Redpanda",
+        "Docker",
+        "MinIO",
+        "Kafka",
+        "Streaming"
+      ],
+      "visibility": "private",
+      "github": "",
+      "highlights": [
+        "Kafka-compatible producers/consumers on Redpanda",
+        "Docker Compose stack: Redpanda + MinIO + Python services",
+        "MinIO object storage for raw sensor telemetry"
+      ]
+    },
+    {
+      "slug": "deepfridge",
+      "title": "DeepFridge — Cross-Platform Fridge Inventory App",
+      "category": "web",
+      "summary": "React Native + Supabase mobile app for fridge inventory with real-time multi-user sync, barcode scanning, and receipt capture.",
+      "description": "Cross-platform mobile app for fridge inventory management with real-time sync across shared devices via Supabase Realtime. Integrates Supabase Auth and shared-fridge functionality enabling multiple users to update the same fridge simultaneously. Multi-input entry — barcode scanning, receipt image capture, and manual entry — reduces friction for adding items.",
+      "tags": [
+        "React Native",
+        "Expo",
+        "Supabase",
+        "TypeScript",
+        "Mobile"
+      ],
+      "visibility": "private",
+      "github": "",
+      "highlights": [
+        "Real-time multi-user sync via Supabase Realtime",
+        "Supabase Auth + shared-fridge multi-user updates",
+        "Barcode scan, receipt capture, and manual entry"
+      ]
+    },
+    {
+      "slug": "gaitorgate",
+      "title": "GaitorGate — SFSU CSC648 Team Project",
+      "category": "web",
+      "summary": "Full software engineering lifecycle project built with a 6-person team for SFSU's CSC648 software engineering course.",
+      "description": "A software engineering course project at San Francisco State University (CSC648). I worked with a six-person team on requirements, design milestones, implementation, and delivery using shared version-control workflows.",
+      "tags": [
+        "Python",
+        "Team Project",
+        "CSC648",
+        "Software Engineering"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/GaitorGate",
+      "highlights": [
+        "6-person team project at SFSU (CSC648)",
+        "Full SDLC: requirements, design, implementation, shipping",
+        "Multi-developer collaboration and version control"
+      ]
+    },
+    {
+      "slug": "face-detection",
+      "title": "Face Detection (OpenCV)",
+      "category": "ai",
+      "summary": "A webcam-based face detection experiment using OpenCV.",
+      "description": "An OpenCV application that captures webcam frames, runs classical face detection, and overlays bounding boxes. Built alongside my hand-gesture experiments to explore computer vision.",
+      "tags": [
+        "Python",
+        "OpenCV",
+        "Computer Vision"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/face-detection-",
+      "highlights": [
+        "Real-time webcam face detection",
+        "Classical OpenCV pipeline",
+        "Companion to Hand Gesture VisionLight project"
+      ]
+    },
+    {
+      "slug": "voice-cloning-xtts",
+      "title": "Voice Cloning with XTTS-v2",
+      "category": "ai",
+      "summary": "Voice cloning from a 6-second sample using Coqui XTTS-v2 deployed via Hugging Face.",
+      "description": "A voice cloning pipeline that synthesizes speech in a target voice from a 6-second reference sample. Built on Coqui's XTTS-v2 model deployed through Hugging Face, demonstrating Hugging Face model deployment and voice synthesis workflows.",
+      "tags": [
+        "Python",
+        "Hugging Face",
+        "Coqui XTTS-v2",
+        "Voice Synthesis",
+        "AI"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/voice_6",
+      "highlights": [
+        "6-second voice sample cloning",
+        "Coqui XTTS-v2 via Hugging Face",
+        "End-to-end voice synthesis pipeline"
+      ]
+    },
+    {
+      "slug": "system-audio-macos",
+      "title": "System Audio Capture (macOS)",
+      "category": "systems",
+      "summary": "Low-level macOS system audio capture using PyObjC, AppKit, FFmpeg, and the BlackHole driver.",
+      "description": "A macOS audio capture tool using PyObjC to bridge into AppKit, the BlackHole virtual audio driver to route system output, and FFmpeg to encode captured streams.",
+      "tags": [
+        "Python",
+        "PyObjC",
+        "FFmpeg",
+        "BlackHole",
+        "macOS"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/system_audio",
+      "highlights": [
+        "PyObjC bridge into AppKit",
+        "BlackHole virtual audio driver routing",
+        "FFmpeg encoding pipeline"
+      ]
+    },
+    {
+      "slug": "hugging-face-module",
+      "title": "Hugging Face Module",
+      "category": "ai",
+      "summary": "A reusable Python module for common Hugging Face Transformers workflows.",
+      "description": "A Python wrapper that groups common Hugging Face Transformers workflows behind a reusable interface. An exercise in organizing model code for use across projects.",
+      "tags": [
+        "Python",
+        "Hugging Face",
+        "Transformers",
+        "Module"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/hugging_face",
+      "highlights": [
+        "Reusable Transformers wrapper",
+        "Shared module interface",
+        "Python code organization"
+      ]
+    },
+    {
+      "slug": "youtube-downloader",
+      "title": "YouTube Audio + MP4 Downloader",
+      "category": "systems",
+      "summary": "Practical CLI utility for downloading YouTube audio and MP4 video via yt-dlp.",
+      "description": "A practical command-line utility that downloads audio tracks and MP4 video from YouTube using yt-dlp. Pairs naturally with the real-time audio recorder project for end-to-end audio workflows.",
+      "tags": [
+        "Python",
+        "yt-dlp",
+        "CLI",
+        "Utility"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/download_youtube_audio_and_mp4",
+      "highlights": [
+        "Audio + MP4 download via yt-dlp",
+        "CLI utility",
+        "Pairs with audio recorder pipeline"
+      ]
+    },
+    {
+      "slug": "flask-server",
+      "title": "Flask Server Starter",
+      "category": "web",
+      "summary": "A Flask starter for experimenting with backend services and API endpoints.",
+      "description": "A small Flask server exposing API endpoints and providing a starting point for backend experiments.",
+      "tags": [
+        "Python",
+        "Flask",
+        "Backend",
+        "API"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/flask-",
+      "highlights": [
+        "Flask API endpoints",
+        "Reusable starter structure",
+        "Backend service experiments"
+      ]
+    },
+    {
+      "slug": "nltk-notebook",
+      "title": "Natural Language Toolkit (NLTK Notebook)",
+      "category": "ai",
+      "summary": "Coursework exploring tokenization, tagging, and parsing with NLTK.",
+      "description": "A Jupyter notebook exploring natural-language processing with NLTK, including tokenization, tagging, parsing, and basic linguistic analysis. Developed alongside Natural Language Technologies coursework at SFSU.",
+      "tags": [
+        "Python",
+        "NLTK",
+        "Jupyter",
+        "NLP"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/Natural-Language-Toolki",
+      "highlights": [
+        "NLP workflows with NLTK",
+        "Jupyter notebook walkthrough",
+        "Maps to SFSU NLP coursework"
+      ]
+    },
+    {
+      "slug": "leetcode-archive",
+      "title": "LeetCode Solutions Archive",
+      "category": "systems",
+      "summary": "A collection of algorithm and data-structure exercises.",
+      "description": "An ongoing collection of practice solutions covering arrays, strings, trees, graphs, and dynamic programming.",
+      "tags": [
+        "Python",
+        "Algorithms",
+        "Data Structures",
+        "LeetCode"
+      ],
+      "visibility": "private",
+      "github": "https://github.com/SergioWater/LeetCode",
+      "highlights": [
+        "Arrays, strings, trees, and graphs",
+        "Dynamic programming exercises",
+        "Ongoing problem-solving practice"
+      ]
+    },
+    {
+      "slug": "statboard",
+      "title": "STATBOARD — AI Sports Leaderboard",
+      "category": "ai",
+      "summary": "Real-time AI leaderboard for indoor sportsplexes using computer vision and UWB wristbands to auto-track player stats.",
+      "description": "A real-time, AI-powered leaderboard for indoor sportsplexes. It fuses computer-vision player tracking (YOLO) with UWB wristband positioning to automatically capture player stats — goals, distance, speed — and display them on live leaderboards with no manual scorekeeping.",
+      "tags": [
+        "Python",
+        "Computer Vision",
+        "YOLO",
+        "UWB",
+        "Startup",
+        "AI"
+      ],
+      "github": "https://github.com/SergioWater",
+      "highlights": [
+        "Computer-vision player tracking with YOLO",
+        "UWB wristband positioning fusion",
+        "Real-time auto-updating leaderboards"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "soccer-video-analysis",
+      "title": "Soccer Video Analysis Pipeline",
+      "category": "ai",
+      "summary": "ML pipeline using YOLO and SoccerNet to track players, detect behaviors, and analyze full 90-minute matches.",
+      "description": "An end-to-end machine-learning pipeline that ingests full 90-minute soccer matches, uses YOLO and SoccerNet data to detect and track players across frames, and surfaces behavioral and positional analytics for the whole match.",
+      "tags": [
+        "Python",
+        "YOLO",
+        "Computer Vision",
+        "Machine Learning",
+        "SoccerNet"
+      ],
+      "github": "https://github.com/SergioWater",
+      "highlights": [
+        "Player detection and tracking with YOLO",
+        "Trained/evaluated on SoccerNet data",
+        "Full 90-minute match analysis"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "autonomous-vehicle-simulation",
+      "title": "Autonomous Vehicle Simulation",
+      "category": "ai",
+      "summary": "Simulation environment for autonomous-vehicle algorithms with realistic physics and NEAT-evolved neural drivers.",
+      "description": "A simulation environment for testing autonomous-vehicle algorithms with realistic physics and sensor models. It uses NEAT (NeuroEvolution of Augmenting Topologies) to evolve neural-network drivers that learn to navigate the track over generations.",
+      "tags": [
+        "Python",
+        "Machine Learning",
+        "Computer Vision",
+        "NEAT",
+        "Simulation"
+      ],
+      "github": "https://github.com/SergioWater/ai_neat_car",
+      "highlights": [
+        "NEAT neuroevolution of driver networks",
+        "Realistic physics and sensor models",
+        "Generational learning"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "automatic-note",
+      "title": "Automatic Note",
+      "category": "ai",
+      "summary": "Real-time audio transcription app using Python and the Whisper API with multi-threaded capture.",
+      "description": "A desktop application that transcribes audio in real time using Python and the Whisper API. Multi-threaded audio capture keeps recording smooth while transcription runs concurrently.",
+      "tags": [
+        "Python",
+        "Whisper API",
+        "Multi-threading",
+        "AI",
+        "Audio Processing"
+      ],
+      "github": "https://github.com/SergioWater/real-time-audio-recorder",
+      "highlights": [
+        "Real-time Whisper transcription",
+        "Multi-threaded audio capture",
+        "Concurrent record + transcribe"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "police-data-with-threads",
+      "title": "Police Data with Threads",
+      "category": "systems",
+      "summary": "Multi-threaded C program analyzing police response times across 500K+ records with mutex-protected critical sections.",
+      "description": "A multi-threaded C program that analyzes police response times across 500K+ records. It uses pthreads to parallelize statistical calculations and mutex locks to protect critical sections, demonstrating safe concurrent access and performance optimization.",
+      "tags": [
+        "C",
+        "Multi-threading",
+        "Data Analysis",
+        "Performance Optimization",
+        "Mutex Locks"
+      ],
+      "github": "https://github.com/SergioWater/Police-Data-with-Threads",
+      "highlights": [
+        "pthreads parallel processing",
+        "Mutex-protected critical sections",
+        "500K+ records analyzed"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "roblox-game",
+      "title": "Roblox Survival Game",
+      "category": "games",
+      "summary": "Roblox survival tycoon with procedural tower generation, custom character physics, and drop-zone mechanics in Luau.",
+      "description": "A Roblox survival-tycoon game built in Luau inside Roblox Studio. It features procedural tower generation, custom character physics, and drop-zone mechanics that drive the core gameplay loop.",
+      "tags": [
+        "Luau",
+        "Roblox Studio",
+        "Game Development",
+        "Procedural Generation"
+      ],
+      "github": "https://github.com/SergioWater/rectangledropzone",
+      "highlights": [
+        "Procedural tower generation",
+        "Custom character physics",
+        "Drop-zone gameplay mechanics"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "multiplayer-uno",
+      "title": "Online Multiplayer Uno",
+      "category": "games",
+      "summary": "Real-time online multiplayer Uno built as a team project with live game-state synchronization.",
+      "description": "A real-time, online multiplayer Uno card game built as a team project. It synchronizes live game state across players over WebSockets so every client stays in sync as cards are played.",
+      "tags": [
+        "JavaScript",
+        "WebSockets",
+        "Multiplayer",
+        "Team Project"
+      ],
+      "github": "https://github.com/SergioWater/project-team-dj",
+      "highlights": [
+        "Real-time multiplayer over WebSockets",
+        "Live game-state synchronization",
+        "Built as a team project"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "discord-clone",
+      "title": "Discord Clone",
+      "category": "web",
+      "summary": "Discord recreation with real-time messaging, channel creation, and Firebase authentication.",
+      "description": "A recreation of the Discord chat app with real-time messaging via Socket.io, channel creation, and Firebase-backed user authentication, styled with Tailwind CSS.",
+      "tags": [
+        "React",
+        "Socket.io",
+        "Tailwind CSS",
+        "Firebase"
+      ],
+      "github": "https://github.com/SergioWater/Discord-Clone",
+      "highlights": [
+        "Real-time messaging with Socket.io",
+        "Channel creation",
+        "Firebase authentication"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "netflix-clone",
+      "title": "Netflix Clone",
+      "category": "web",
+      "summary": "Netflix interface replica with responsive layouts and TMDB API integration for real movie data.",
+      "description": "A learning project recreating the Netflix interface with responsive layouts and TMDB API integration for movie and show data in content rows and a hero banner.",
+      "tags": [
+        "React",
+        "API Integration",
+        "CSS",
+        "TMDB API"
+      ],
+      "github": "https://github.com/SergioWater/NetflixClone",
+      "highlights": [
+        "TMDB API integration",
+        "Responsive Netflix-style UI",
+        "Dynamic content rows"
+      ],
+      "visibility": "private"
+    },
+    {
+      "slug": "weather-app",
+      "title": "Weather App",
+      "category": "web",
+      "summary": "Weather app with real-time conditions for any location and geolocation auto-detect via OpenWeather.",
+      "description": "A weather application that provides real-time conditions and forecasts for any location, with geolocation support to auto-detect the user's current position via the OpenWeather API.",
+      "tags": [
+        "React",
+        "OpenWeather API",
+        "Geolocation"
+      ],
+      "github": "https://github.com/SergioWater/WeatherApp",
+      "highlights": [
+        "OpenWeather API integration",
+        "Geolocation auto-detect",
+        "Real-time conditions"
+      ],
+      "visibility": "private"
+    }
+  ]
+}

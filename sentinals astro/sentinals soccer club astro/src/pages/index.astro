@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../sections/Hero.astro";
+import Programs from "../sections/Programs.astro";
+import OurClub from "../sections/OurClub.astro";
+import TryoutsStatus from "../sections/TryoutsStatus.astro";
+import { buildHomeSchemas } from "../lib/schema";
+
+const schemas = await buildHomeSchemas();
+---
+
+<BaseLayout schemas={schemas}>
+  <Hero />
+  <Programs />
+  <OurClub />
+  <TryoutsStatus />
+</BaseLayout>

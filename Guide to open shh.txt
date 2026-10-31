@@ -1,0 +1,28 @@
+use id_rsa both private and public inside of folder
+
+
+
+fix permission issues
+
+$key = "D:\001_websites\Sergio portfolio\.ssh\id_rsa"
+icacls $key /inheritance:r
+icacls $key /grant:r "$($env:USERNAME):(R)"
+icacls $key /remove "NT AUTHORITY\Authenticated Users"
+icacls $key /remove "BUILTIN\Users"
+
+
+
+ssh -i "D:\001_websites\Sergio portfolio\.ssh\id_rsa" jrfxwzte@sh00126.hostgator.com
+
+
+run 
+From
+PS D:\001_websites\Sergio portfolio>
+
+
+scp -i ".ssh\id_rsa" -o IdentitiesOnly=yes -r ".\Sergio Aguilar — Portfolio\*" jrfxwzte@jrf.xwz.temporary.site:~/public_html/website_76b84fb8/
+
+
+Sentinals
+
+scp -i ".ssh\id_rsa" -o IdentitiesOnly=yes -r ".\Sergio Aguilar — Portfolio\*" jrfxwzte@jrf.xwz.temporary.site:~/public_html/website_76b84fb8/

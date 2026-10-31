@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Baseline",
+  "type": "object",
+  "required": ["project", "capturedAt", "kind"],
+  "properties": {
+    "project": { "type": "string" },
+    "kind": { "enum": ["lighthouse", "bundle", "inventory", "manual"] },
+    "capturedAt": { "type": "string", "format": "date-time" },
+    "label": { "type": "string", "description": "e.g. pre-cutover, post-perf-pass" },
+    "data": { "type": "object", "additionalProperties": true }
+  }
+}

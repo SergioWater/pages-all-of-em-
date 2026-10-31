@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Camps | Sentinels Soccer Club — Morgan Hill &amp; Gilroy</title>
+    <meta name="description" content="Week-long summer soccer day camps for ages 5-12 in Morgan Hill, Gilroy, and Hollister, CA. Skills, drills, and scrimmages, 9 AM to 12 PM, $150 per week." />
+    <link rel="canonical" href="https://sentinelssoccerclub.com/summer-camps.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Summer Camps | Sentinels Soccer Club — Morgan Hill &amp; Gilroy" />
+    <meta property="og:description" content="Week-long summer soccer day camps for ages 5-12 in Morgan Hill, Gilroy, and Hollister, CA. Skills, drills, and scrimmages, 9 AM to 12 PM, $150 per week." />
+    <meta property="og:url" content="https://sentinelssoccerclub.com/summer-camps.html" />
+    <meta property="og:image" content="https://sentinelssoccerclub.com/images/favicon_transparent.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:16px 0 6px;font-size:.85rem;line-height:1.5}
+      .footer-nav a{color:inherit;opacity:.82;text-decoration:none}
+      .footer-nav a:hover{opacity:1;text-decoration:underline}
+    </style>
+</head>
+
+<body>
+
+<!-- ========================================
+     TOP BAR
+     ======================================== -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="mailto:sentinelssoccerclub@gmail.com"><i class="fas fa-envelope"></i>
+                    sentinelssoccerclub@gmail.com</a>
+                <a href="tel:4087221028"><i class="fas fa-phone"></i> (408) 722-1028</a>
+            </div>
+            <div class="topbar-center">
+                <a href="index.html"><img src="./images/favicon_transparent.png" alt="Sentinels Soccer Club Logo" /></a>
+            </div>
+            <div class="topbar-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sentinelssoccerclub/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sentinels.soccer.club" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@SentinelsSoccerClub/featured" target="_blank"
+                        rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <a href="https://sportscampament.web.app/#" class="btn-login">Login / Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="navbar-inner">
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="
+                        document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i> MENU
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Homepage</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="has-dropdown">
+                    <a href="#" class="nav-link active" aria-haspopup="true">Programs <span class="caret">▼</span></a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="competitive.html">Competitive</a>
+                        <a href="recreational.html">Rec League</a>
+                        <a href="private-training.html">Private Training</a>
+                        <a href="summer-camps.html" aria-current="page">Summer Camps</a>
+                    </div>
+                </div>
+                <a href="coaches.html" class="nav-link">Coaches</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="tryouts.html" class="nav-link">Tryouts</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div></div>
+    </nav>
+
+    <!-- ========================================
+     SITE-WIDE PROMO BANNER (Rec registration)
+     Remove this block from each page when the promo ends.
+     ======================================== -->
+    <div class="promo-banner" id="promo-banner" hidden>
+        <div class="promo-banner-inner">
+            <span class="promo-banner-text">
+                <i class="fas fa-bullhorn"></i>
+                <strong>Rec League registration is open</strong> — Fall 2026 season starts in August.
+            </span>
+            <a href="https://sportscampament.web.app/#" class="promo-banner-cta">Sign Up</a>
+            <button class="promo-banner-close" id="promo-banner-close" aria-label="Dismiss announcement">&times;</button>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var b = document.getElementById('promo-banner');
+            if (!b) return;
+            try { if (localStorage.getItem('recPromoDismissed') === '1') return; } catch (e) { }
+            b.hidden = false;
+            document.getElementById('promo-banner-close').addEventListener('click', function () {
+                b.hidden = true;
+                try { localStorage.setItem('recPromoDismissed', '1'); } catch (e) { }
+            });
+        })();
+    </script>
+
+
+    <h1 class="vh">Sentinels Soccer Club Summer Soccer Camps — Morgan Hill, CA</h1>
+
+<section id="summer-camps" class="section">
+        <div class="section-inner">
+            <h2>Summer <span class="accent">Camps</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Week-long day camps to keep your player active and improving
+                all summer.
+            </p>
+
+            <div class="camp-detail-grid">
+                <div class="camp-detail-card">
+                    <div class="label">Ages</div>
+                    <div class="value">5 – 12</div>
+                </div>
+                <div class="camp-detail-card">
+                    <div class="label">Time</div>
+                    <div class="value">9 AM – 12 PM</div>
+                </div>
+                <div class="camp-detail-card">
+                    <div class="label">Cost</div>
+                    <div class="value">$150 / week</div>
+                </div>
+            </div>
+
+            <p>
+                Our summer camps give young players a fun, structured soccer
+                experience during school break. Each week-long camp focuses
+                on building fundamental skills through engaging drills,
+                small-sided games, and scrimmages.
+            </p>
+
+            <h3>What Campers Work On</h3>
+            <div class="camp-skills">
+                <span class="camp-skill-tag">Station Work</span>
+                <span class="camp-skill-tag">Dribbling / Ball Work</span>
+                <span class="camp-skill-tag">Technical Drills</span>
+                <span class="camp-skill-tag">Goal Scoring Drills</span>
+                <span class="camp-skill-tag">Scrimmaging</span>
+            </div>
+
+            <p>
+                Camps are led by Sentinels coaching staff who bring energy,
+                patience, and expertise to every session. Players of all
+                skill levels are welcome — from beginners to experienced
+                club players looking to sharpen their game.
+            </p>
+
+            <div style="
+                        margin-top: 20px;
+                        padding: 20px;
+                        background: var(--gray-100);
+                        border-radius: 8px;
+                    ">
+                <h3 style="margin-top: 0">
+                    <i class="fas fa-map-marker-alt" style="color: var(--green)"></i>
+                    Location
+                </h3>
+                <p style="margin-bottom: 0">
+                    <strong>Morgan Hill Community Adult School</strong><br />Morgan Hill, California
+                </p>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-inner">
+            <img src="./images/site-logo-1.png" alt="Sentinels Soccer Club" />
+            <nav class="footer-nav" aria-label="Site pages">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="competitive.html">Competitive</a>
+                <a href="recreational.html">Rec League</a>
+                <a href="private-training.html">Private Training</a>
+                <a href="summer-camps.html">Summer Camps</a>
+                <a href="coaches.html">Coaches</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="tryouts.html">Tryouts</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="copyright">
+                &copy; 2015–2026 Sentinels Soccer Club
+            </div>
+            <div class="credit">Web Design by @SergioAguilar</div>
+            <!-- <div class="pplx-link">
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity
+          Computer</a>
+      </div> -->
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile nav after clicking a link (skip dropdown parent)
+        document.querySelectorAll(".nav-links .nav-link").forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (!link.closest(".has-dropdown")) {
+                    document.querySelector(".nav-links").classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

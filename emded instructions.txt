@@ -1,0 +1,15 @@
+Steps (high level):
+
+Convert Miguel's Instagram to a Business or Creator account (free, takes 2 min in Instagram settings)
+
+Connect it to a Facebook Page (also required, also free)
+
+Create a Meta Developer account at developers.facebook.com
+
+Create a new app, add the "Instagram Graph API" product
+
+Generate a long-lived access token (60 days, then you refresh it)
+
+Write JS or PHP that calls https://graph.facebook.com/v18.0/{user-id}/media?access_token=...
+
+Parse the JSON response and render <img> tags with your existing HBK styling

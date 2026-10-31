@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Training &amp; Contact — HBK Futsal | San Jose, CA</title>
+  <meta name="description" content="Book futsal training with HBK — skills sessions, youth development, tryouts, and partnerships. Call 669-350-3341 or reach out online. San Jose, California." />
+  <link rel="canonical" href="https://www.hbkfutsal.com/book-online.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Book Training &amp; Contact — HBK Futsal" />
+  <meta property="og:description" content="Questions, tryouts, or partnerships? Reach out to HBK Futsal." />
+  <meta property="og:url" content="https://www.hbkfutsal.com/book-online.html" />
+  <meta property="og:image" content="https://www.hbkfutsal.com/assets/services/futsal-training.jpg" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="HBK Futsal home">
+        <img src="assets/logo.svg" alt="HBK Futsal logo" class="nav__logo" />
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">HBK Futsal</span>
+          <span class="nav__brand-sub">Humble Ballers Klub</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" class="nav__link" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="teams.html">Teams</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="coaches.html">Coaches</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="programs.html">Programs</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="schedule.html">Schedule</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="sponsors.html">Sponsors</a></li>
+        <li role="none"><a role="menuitem" class="nav__link" href="portal.html">Portal</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <p class="page-hero__eyebrow">Get on the Court</p>
+    <h1 class="page-hero__title">Book Training</h1>
+    <p class="page-hero__lede">Skills sessions, youth development, tryouts, and partnerships — reach out and we'll get you started.</p>
+  </section>
+
+  <section class="section section--cream">
+    <div class="section__inner">
+      <div class="contact">
+        <h2 class="contact__title">Contact HBK</h2>
+        <p class="contact__lede">Questions, tryouts, or partnerships? Reach out.</p>
+        <div class="contact__rows">
+          <div><a href="tel:+16693503341">669-350-3341</a></div>
+          <div><a href="https://www.hbkfutsal.com">www.hbkfutsal.com</a></div>
+          <div><a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">Instagram — @hbkfutbol</a></div>
+        </div>
+        <p class="center mt-32">
+          <a class="hero__cta" href="programs.html">Explore Programs</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">© 2026 HBK Futsal · Humble Ballers Klub · <a href="index.html">hbkfutsal.com</a> · <a href="https://www.instagram.com/hbkfutbol/" target="_blank" rel="noopener">@hbkfutbol</a></div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav__toggle');
+      const menu = document.querySelector('.nav__menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    })();
+
+    // Scroll reveal — sections and cards fade/rise into view. Skipped for
+    // reduced-motion users; without JS everything is simply visible.
+    (function() {
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll([
+        '.page-hero__eyebrow', '.page-hero__title', '.page-hero__lede',
+        '.section__eyebrow', '.section__title', '.section__lede',
+        '.nationals > *', '.welcome > *', '.women-squad', '.squad-divider',
+        '.player', '.coach-card', '.program', '.schedule__row', '.match-poster',
+        '.signing-card', '.ig-tile', '.sponsor > *', '.contact > *',
+        '.hub-card', '.portal-card', '.portal-client', '.roster-search', '.sponsor-wall > *'
+      ].join(','));
+      if (!targets.length) return;
+      targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = (i % 4) * 70 + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          el.classList.add('is-revealed');
+          io.unobserve(el);
+          const done = () => { el.classList.remove('reveal'); el.style.transitionDelay = ''; };
+          el.addEventListener('transitionend', done, { once: true });
+          setTimeout(done, 1000);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

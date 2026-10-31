@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GalleryIsland from "../components/GalleryIsland";
+import {
+  CAROUSEL_SLIDES,
+  GALLERY_SECTIONS,
+  IMG_PATH,
+} from "../lib/gallery";
+---
+
+<BaseLayout
+  title="Team Gallery"
+  description="Sentinels Soccer Club photo gallery — championships, team moments, and academy portraits from Morgan Hill, Gilroy, and Hollister."
+>
+  <h1 class="vh">
+    Sentinels Soccer Club Photo Gallery — Team Photos, Tournaments, and Training
+    in Morgan Hill, Gilroy, and Hollister
+  </h1>
+  <GalleryIsland
+    client:only="solid-js"
+    slides={CAROUSEL_SLIDES}
+    sections={GALLERY_SECTIONS}
+    imgPath={IMG_PATH}
+  />
+</BaseLayout>

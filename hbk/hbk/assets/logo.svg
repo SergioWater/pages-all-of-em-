@@ -1,0 +1,72 @@
+<svg id="hbk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="hbk-logo-title">
+  <title id="hbk-logo-title">HBK Futsal logo  wireframe planet with orbital ring and HBK wordmark</title>
+  <!--
+    Layered HBK mark. Groups (per redesign brief):
+      #logo-badge     outer circle outline
+      #logo-sphere    wireframe globe  meridians + parallels as separate paths
+      #logo-ring      orbital ring (front arc; #logo-ring-back is the arc behind the sphere)
+      #logo-wordmark  "HBK" letters  kept OUTSIDE the rotating group
+      #logo-stars     three sparkles
+    NOTE: an inline copy of this SVG lives in index.html (hero animation).
+    Keep the two in sync. Meridian resting widths are baked into the
+    `transform` attributes so this file renders statically everywhere;
+    styles.css overrides them with CSS transforms to animate the spin.
+  -->
+  <g id="logo-stars" fill="#ffffff">
+    <g class="logo-star logo-star--1">
+      <path transform="translate(302 100) scale(1.05)" d="M0,-16 C2,-4.5 4.5,-2 16,0 C4.5,2 2,4.5 0,16 C-2,4.5 -4.5,2 -16,0 C-4.5,-2 -2,-4.5 0,-16 Z"/>
+    </g>
+    <g class="logo-star logo-star--2">
+      <path transform="translate(92 158) scale(0.66)" d="M0,-16 C2,-4.5 4.5,-2 16,0 C4.5,2 2,4.5 0,16 C-2,4.5 -4.5,2 -16,0 C-4.5,-2 -2,-4.5 0,-16 Z"/>
+    </g>
+    <g class="logo-star logo-star--3">
+      <path transform="translate(284 294) scale(0.5)" d="M0,-16 C2,-4.5 4.5,-2 16,0 C4.5,2 2,4.5 0,16 C-2,4.5 -4.5,2 -16,0 C-4.5,-2 -2,-4.5 0,-16 Z"/>
+    </g>
+  </g>
+
+  <!-- back half of the orbital ring  painted before the sphere so the planet occludes it -->
+  <g id="logo-ring-back" class="logo-ring-part" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+    <path d="M339.1 149.4 A148 40 -20 0 0 60.9 250.6"/>
+  </g>
+
+  <g id="logo-sphere" fill="none" stroke="#ffffff">
+    <circle class="logo-limb" cx="200" cy="200" r="100" stroke-width="1.5" opacity="0.95"/>
+    <!-- parallels (latitude)  static while the globe turns on its vertical axis -->
+    <g class="logo-parallels" stroke-width="1.2" opacity="0.8">
+      <ellipse cx="200" cy="200"   rx="100"  ry="24"/>
+      <ellipse cx="200" cy="166.8" rx="94"   ry="22.6"/>
+      <ellipse cx="200" cy="233.2" rx="94"   ry="22.6"/>
+      <ellipse cx="200" cy="137.6" rx="76.6" ry="18.4"/>
+      <ellipse cx="200" cy="262.4" rx="76.6" ry="18.4"/>
+      <ellipse cx="200" cy="116"   rx="50"   ry="12"/>
+      <ellipse cx="200" cy="284"   rx="50"   ry="12"/>
+      <ellipse cx="200" cy="105.1" rx="20.8" ry="5"/>
+      <ellipse cx="200" cy="294.9" rx="20.8" ry="5"/>
+    </g>
+    <!-- meridians (longitude)  each rotates through edge-on as the sphere spins.
+         The baked transform is the RESTING width; CSS scaleX(cos(...)) overrides it. -->
+    <g class="logo-meridians" stroke-width="1.2" opacity="0.8">
+      <ellipse class="logo-meridian" style="--phase: 0deg"   cx="200" cy="200" rx="100" ry="100"/>
+      <ellipse class="logo-meridian" style="--phase: 30deg"  cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.866 1) translate(-200 -200)"/>
+      <ellipse class="logo-meridian" style="--phase: 60deg"  cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.5 1) translate(-200 -200)"/>
+      <ellipse class="logo-meridian" style="--phase: 90deg"  cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.012 1) translate(-200 -200)"/>
+      <ellipse class="logo-meridian" style="--phase: 120deg" cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.5 1) translate(-200 -200)"/>
+      <ellipse class="logo-meridian" style="--phase: 150deg" cx="200" cy="200" rx="100" ry="100" transform="translate(200 200) scale(0.866 1) translate(-200 -200)"/>
+    </g>
+  </g>
+
+  <!-- front half of the orbital ring  sweeps in front of the planet's lower half -->
+  <g id="logo-ring" class="logo-ring-part" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+    <path d="M339.1 149.4 A148 40 -20 0 1 60.9 250.6"/>
+  </g>
+
+  <g id="logo-wordmark" fill="#ffffff">
+    <path d="M125,171 H139 V193 H151 V171 H165 V229 H151 V207 H139 V229 H125 Z"/>
+    <path fill-rule="evenodd" d="M181,171 H204 Q219,171 219,186 V191 Q219,200 212,202 Q219,204 219,213 V214 Q219,229 204,229 H181 Z M195,185 H201 Q207,185 207,190 V191 Q207,194 204,194 H195 Z M195,210 H201 Q207,210 207,215 V216 Q207,219 204,219 H195 Z"/>
+    <path d="M235,171 H249 V193 L263,171 H276 L258,198 L276,229 H263 L249,204 V229 H235 Z"/>
+  </g>
+
+  <g id="logo-badge" fill="none" stroke="#ffffff" stroke-width="2.5">
+    <circle cx="200" cy="200" r="185" pathLength="1000"/>
+  </g>
+</svg>

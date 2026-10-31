@@ -1,0 +1,35 @@
+---
+import "../styles/colors_and_type.css";
+import "../styles/global.css";
+import "../styles/landing.css";
+import BaseHead from "../components/BaseHead.astro";
+import JsonLd from "../components/JsonLd.astro";
+import Nav from "../components/Nav.astro";
+import PromoBanner from "../components/PromoBanner.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  schemas?: Record<string, unknown>[];
+  image?: string;
+}
+
+const { title, description, schemas = [], image } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+    {schemas.map((data) => <JsonLd data={data} />)}
+  </head>
+  <body>
+    <Nav />
+    <PromoBanner />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Aguilar — Portfolio</title>
+  <meta name="description" content="Computer Science graduate building trading systems, AI, and full-stack products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260908-3">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="name">Sergio Aguilar<span class="dot">.</span></span>
+      <span class="role">CS Grad · San Jose</span>
+    </div>
+    <nav class="topbar-links" aria-label="Main navigation">
+      <a href="https://github.com/SergioWater" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/sergiowater/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main">
+    <section class="intro">
+      <div class="container">
+        <div class="eyebrow">Portfolio</div>
+        <h1>I build <span class="accent">systems, AI, and products.</span></h1>
+        <p id="intro-tag">My work spans shipped websites, a launched software application, and ongoing experiments in systems and AI. I build independently and collaborate with others to bring projects to life.</p>
+        <p class="access-note">Project overviews here. Repository access through GitHub.</p>
+        <div class="hint">↓ Pick a lane to see the work</div>
+      </div>
+    </section>
+
+    <section class="stage" aria-label="Browse projects by category" aria-busy="true">
+      <div id="wheel-wrap">
+        <svg id="wheel" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="cat-results" id="cat-results"></div>
+      </div>
+      <p id="load-status" role="status">Loading projects…</p>
+    </section>
+    <noscript><p class="container">Enable JavaScript to explore the projects, or visit <a href="https://github.com/SergioWater">Sergio on GitHub</a>.</p></noscript>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <div class="panel-back" id="detail-back" aria-modal="true" role="dialog" aria-labelledby="project-title" tabindex="-1"></div>
+
+  <script src="app.js?v=20260908-3" defer></script>
+</body>
+</html>

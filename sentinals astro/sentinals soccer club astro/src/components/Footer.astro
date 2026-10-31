@@ -1,0 +1,16 @@
+---
+import { CONTACT, FOOTER_LINKS } from "../consts";
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <img src="/images/site-logo-1.png" alt="Sentinels Soccer Club" />
+    <nav class="footer-nav" aria-label="Site pages">
+      {FOOTER_LINKS.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+    <div class="copyright">
+      &copy; {CONTACT.foundingYear}–2026 {CONTACT.name}
+    </div>
+    <div class="credit">Web Design by @SergioAguilar</div>
+  </div>
+</footer>

@@ -1,0 +1,109 @@
+---
+import { CONTACT, NAV_ITEMS } from "../consts";
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = Astro.url.pathname } = Astro.props;
+const normalize = (p: string) => (p.endsWith("/") && p !== "/" ? p.slice(0, -1) : p);
+const here = normalize(currentPath);
+
+function isActive(href: string) {
+  if (href === "/") return here === "/";
+  return here === normalize(href) || here.startsWith(normalize(href) + "/");
+}
+---
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <a href={`mailto:${CONTACT.email}`}
+        ><i class="fas fa-envelope"></i> {CONTACT.email}</a
+      >
+      <a href={`tel:${CONTACT.phoneTel}`}
+        ><i class="fas fa-phone"></i> {CONTACT.phoneDisplay}</a
+      >
+    </div>
+    <div class="topbar-center">
+      <a href="/"
+        ><img
+          src="/images/favicon_transparent.png"
+          alt="Sentinels Soccer Club Logo"
+        /></a
+      >
+    </div>
+    <div class="topbar-right">
+      <div class="social-icons">
+        <a
+          href={CONTACT.sameAs[0]}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"><i class="fab fa-facebook-f"></i></a
+        >
+        <a
+          href={CONTACT.sameAs[1]}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"><i class="fab fa-instagram"></i></a
+        >
+        <a
+          href={CONTACT.sameAs[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"><i class="fab fa-youtube"></i></a
+        >
+      </div>
+      <a href={CONTACT.registrationUrl} class="btn-login">Login / Sign Up</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" id="nav-toggle">
+      <i class="fas fa-bars"></i> MENU
+    </button>
+    <div class="nav-links" id="nav-links">
+      {
+        NAV_ITEMS.map((item) =>
+          item.children ? (
+            <div class="has-dropdown">
+              <a href={item.href} class="nav-link" aria-haspopup="true">
+                {item.label} <span class="caret">▼</span>
+              </a>
+              <div class="dropdown-menu" role="menu">
+                {item.children.map((child) => (
+                  <a href={child.href}>{child.label}</a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class:list={["nav-link", { active: isActive(item.href) }]}
+              aria-current={isActive(item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          ),
+        )
+      }
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const links = document.getElementById("nav-links");
+  toggle?.addEventListener("click", () => {
+    links?.classList.toggle("active");
+  });
+  links?.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!(link as HTMLElement).closest(".has-dropdown")) {
+        links.classList.remove("active");
+      }
+    });
+  });
+</script>

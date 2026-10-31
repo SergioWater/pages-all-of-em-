@@ -1,0 +1,8 @@
+# Joey De Leon — jdlre.com
+User-agent: *
+Allow: /
+
+# Do not index Next.js build artifacts if ever exposed
+Disallow: /_next/
+
+Sitemap: https://jdlre.com/sitemap.xml
