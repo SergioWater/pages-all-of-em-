@@ -20,14 +20,14 @@ resource.enc
 .nested-git-backups/
 
 # Nested repositories — each keeps its own .git and remote
-bay area web studio/
-donjosetacos/
-jev-seo/
-jita_kensei_funnel/
-kenseijudoschool/
+/bay area web studio/
+/donjosetacos/
+/jev-seo/
+/jita_kensei_funnel/
+/kenseijudoschool/
 
 # Local backups and deploy staging copies (not source)
-kensei images backup/
+/kensei images backup/
 _upload_staging/
 
 # Archives
